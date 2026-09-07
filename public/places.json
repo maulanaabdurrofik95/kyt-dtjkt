@@ -6,8 +6,8 @@
     "tugas": "Instalasi switch, crimping kabel UTP, dan konfigurasi PC client",
     "titik": [
       {
-        "x": 18,
-        "y": 30,
+        "x": 9,
+        "y": 41,
         "ikon": "🔌",
         "bahaya": "Kabel power berserakan di lantai lorong",
         "risiko": "Tersandung, PC jatuh, korsleting bila terinjak",
@@ -27,8 +27,8 @@
         "gambar": "img/lab1.png"
       },
       {
-        "x": 55,
-        "y": 22,
+        "x": 50,
+        "y": 20,
         "ikon": "⚡",
         "bahaya": "Stop kontak overload (tumpuk 6+ colokan)",
         "risiko": "Panas berlebih → kebakaran",
@@ -48,8 +48,8 @@
         "gambar": "img/lab2.png"
       },
       {
-        "x": 78,
-        "y": 55,
+        "x": 90,
+        "y": 80,
         "ikon": "🪑",
         "bahaya": "Kursi roda rusak dipakai siswa",
         "risiko": "Jatuh saat praktikum",
@@ -69,7 +69,7 @@
         "gambar": "img/lab3.png"
       },
       {
-        "x": 40,
+        "x": 83,
         "y": 70,
         "ikon": "🔥",
         "bahaya": "Tidak ada APAR / APAR kedaluwarsa",
@@ -90,8 +90,8 @@
         "gambar": "img/lab4.png"
       },
       {
-        "x": 65,
-        "y": 82,
+        "x": 50,
+        "y": 77,
         "ikon": "💨",
         "bahaya": "Ventilasi kurang, AC mati, 30 siswa",
         "risiko": "Sesak, pusing, konsentrasi turun",
@@ -119,8 +119,8 @@
     "tugas": "Pemasangan radio PTP + pointing antena",
     "titik": [
       {
-        "x": 50,
-        "y": 18,
+        "x": 56,
+        "y": 43,
         "ikon": "🪜",
         "bahaya": "Naik tanpa full body harness + helm",
         "risiko": "Jatuh dari ketinggian → fatal",
@@ -140,8 +140,8 @@
         "gambar": "img/tower1.png"
       },
       {
-        "x": 22,
-        "y": 55,
+        "x": 88,
+        "y": 48,
         "ikon": "⚡",
         "bahaya": "Tower dekat kabel PLN + mendung petir",
         "risiko": "Sengatan listrik / sambaran petir",
@@ -161,8 +161,8 @@
         "gambar": "img/tower2.png"
       },
       {
-        "x": 75,
-        "y": 48,
+        "x": 55,
+        "y": 58,
         "ikon": "🔧",
         "bahaya": "Obeng/tang tidak diikat, jatuh dari atas",
         "risiko": "Menimpa kru di bawah",
@@ -182,8 +182,8 @@
         "gambar": "img/tower3.png"
       },
       {
-        "x": 45,
-        "y": 78,
+        "x": 50,
+        "y": 90,
         "ikon": "🪨",
         "bahaya": "Tanah becek habis hujan, kaki tower licin",
         "risiko": "Tergelincir saat naik/turun",
@@ -211,8 +211,8 @@
     "tugas": "Splicing kabel fiber + uji OPM/OTDR",
     "titik": [
       {
-        "x": 30,
-        "y": 35,
+        "x": 60,
+        "y": 70,
         "ikon": "👁️",
         "bahaya": "Menatap ujung fiber aktif (laser tak kasatmata)",
         "risiko": "Kerusakan retina permanen",
@@ -232,8 +232,8 @@
         "gambar": "img/fiber1.png"
       },
       {
-        "x": 62,
-        "y": 30,
+        "x": 32,
+        "y": 78,
         "ikon": "🪡",
         "bahaya": "Potongan fiber (serpihan kaca) di meja",
         "risiko": "Tertusuk kulit / masuk mata",
@@ -253,8 +253,8 @@
         "gambar": "img/fiber2.png"
       },
       {
-        "x": 80,
-        "y": 60,
+        "x": 27,
+        "y": 58,
         "ikon": "🔥",
         "bahaya": "Alkohol + tisu pembersih dekat stop kontak",
         "risiko": "Terbakar bila kena percikan",
@@ -274,8 +274,8 @@
         "gambar": "img/fiber3.png"
       },
       {
-        "x": 42,
-        "y": 75,
+        "x": 49,
+        "y": 60,
         "ikon": "🔌",
         "bahaya": "Fusion splicer + OPM baterai bocor",
         "risiko": "Korsleting / luka bakar kimia",

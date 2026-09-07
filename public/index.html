@@ -85,7 +85,7 @@ load(0);
 function load(i){
 cur=PLACES[i];found[cur.id]=found[cur.id]||[];answers[cur.id]=answers[cur.id]||{};
 meta.innerHTML='<b>📍 '+cur.nama+'</b> · '+cur.lokasi+'<br>📝 Tugas: '+cur.tugas;
-scene.id='sc-'+cur.id;scene.className='scene';
+scene.className='scene';
 scene.style.backgroundImage='url(img/place-'+cur.id+'.png)';
 scene.innerHTML='<div class="ground"></div>'
 +cur.titik.map((t,k)=>'<div class="pin'+(found[cur.id].includes(k)?' found':'')+'" style="left:'+t.x+'%;top:'+t.y+'%" onclick="openPin('+k+')">'+t.ikon+'<span class="n">'+(k+1)+'</span></div>').join('');
