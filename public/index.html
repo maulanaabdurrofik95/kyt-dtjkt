@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYT Visual DTJKT — Duga Bahaya Tempat Kerja</title>
+<meta name="description" content="Simulasi KYT (Kiken Yochi Training) interaktif: duga bahaya di 3 tempat kerja untuk materi DTJKT Elemen 4 K3LH. SMK TI Muhammadiyah Cikampek.">
+<style>
+:root{--navy:#1F3A5F;--gold:#D9A04A;--bg:#f4f6fa;--card:#fff;--txt:#111;--mut:#5b6b7f;--ok:#15803d;--mid:#b45309;--hi:#b91c1c;--line:#dbe3ee}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--txt);max-width:960px;margin:0 auto;min-height:100vh}
+.kop{background:var(--navy);color:#fff;padding:18px 22px;display:flex;gap:14px;align-items:center}
+.kop .logo{width:52px;height:52px;border-radius:12px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;color:var(--navy)}
+.kop b{font-size:17px;display:block}.kop small{font-size:12px;opacity:.85}
+.hero{padding:22px;text-align:center}
+.hero h1{color:var(--navy);font-size:24px}.hero h1 span{color:var(--gold)}
+.hero p{color:var(--mut);font-size:13px;margin-top:6px;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6}
+.steps{display:flex;gap:8px;justify-content:center;margin:14px 0;flex-wrap:wrap}
+.steps span{background:#fff;border:1px solid var(--line);border-radius:99px;padding:6px 14px;font-size:12px;color:var(--navy);font-weight:600}
+.tabs{display:flex;gap:10px;padding:0 22px;flex-wrap:wrap}
+.tabs button{flex:1;min-width:180px;border:2px solid var(--line);background:#fff;border-radius:14px;padding:12px;font-size:14px;font-weight:700;color:var(--navy);cursor:pointer}
+.tabs button.on{border-color:var(--gold);background:var(--navy);color:#fff}
+.meta{margin:12px 22px;background:#fff;border-left:5px solid var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;line-height:1.7}
+.scene{margin:12px 22px;background:linear-gradient(180deg,#dbeafe,#f8fafc);border:1px solid var(--line);border-radius:18px;position:relative;height:400px;overflow:hidden}
+.scene .ground{position:absolute;bottom:0;left:0;right:0;height:70px;background:#bbf7d0;border-top:3px solid #16a34a}
+.scene#sc-tower .ground{background:#fef3c7;border-color:#d97706}
+.scene#sc-fiber{background:linear-gradient(180deg,#e0e7ff,#f8fafc)}
+.scene#sc-fiber .ground{background:#e2e8f0;border-color:#64748b;height:56px}
+.prop{position:absolute;font-size:44px;opacity:.9}
+.pin{position:absolute;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:#fff;border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:22px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.pin.found{background:var(--navy);border-color:var(--ok)}
+.pin .n{position:absolute;top:-8px;right:-8px;background:var(--hi);color:#fff;font-size:10px;font-weight:800;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.score{margin:12px 22px;display:flex;gap:10px;align-items:center;background:#fff;border-radius:12px;padding:10px 16px;font-size:14px;font-weight:700;color:var(--navy)}
+.score .bar{flex:1;height:10px;background:#e5e7eb;border-radius:99px;overflow:hidden}
+.score .bar i{display:block;height:100%;width:0;background:var(--ok)}
+.card{margin:12px 22px;background:#fff;border-radius:16px;padding:18px;display:none;border-top:5px solid var(--hi)}
+.card.show{display:block}
+.card h3{color:var(--navy);font-size:17px}
+.badge{display:inline-block;font-size:11px;font-weight:800;padding:3px 10px;border-radius:99px;color:#fff;margin:6px 4px 6px 0}
+.b-hi{background:var(--hi)}.b-mid{background:var(--mid)}.b-lo{background:var(--ok)}
+.card table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+.card td{border:1px solid var(--line);padding:8px 10px;vertical-align:top}
+.card td:first-child{font-weight:700;color:var(--navy);width:130px;background:#f8fafc}
+.card .q{margin-top:12px;background:#fffbeb;border:1px dashed var(--gold);border-radius:10px;padding:10px 12px;font-size:13px}
+.card .q button{margin-top:8px;background:var(--navy);color:#fff;border:0;border-radius:10px;padding:9px 16px;font-weight:700;cursor:pointer}
+.rekap{margin:12px 22px 30px;background:var(--navy);color:#fff;border-radius:16px;padding:18px;display:none}
+.rekap.show{display:block}
+.rekap h3{color:var(--gold)}.rekap ol{margin:8px 0 8px 20px;font-size:13px;line-height:1.8}
+.rekap button{background:var(--gold);color:var(--navy);border:0;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;margin-top:6px}
+footer{text-align:center;color:var(--mut);font-size:12px;padding:18px}
+@media(max-width:600px){.scene{height:330px}.prop{font-size:34px}}
+</style>
+</head>
+<body>
+<div class="kop"><div class="logo">M</div><div><b>SMK TI Muhammadiyah Cikampek</b><small>DTJKT Fase E · Elemen 4 K3LH · KYT Visual Interaktif</small></div></div>
+<div class="hero">
+<h1>KYT Visual: <span>Duga Bahaya</span> di Tempat Kerja</h1>
+<p><b>KYT (Kiken Yochi Training)</b> = latihan menduga bahaya sebelum kerja. Cara main: pilih tempat → klik pin 📍 di gambar → baca bahaya + pencegahannya → jawab pertanyaan → kumpulkan semua!</p>
+<div class="steps"><span>1️⃣ Pilih tempat</span><span>2️⃣ Klik pin bahaya</span><span>3️⃣ Baca &amp; jawab</span><span>4️⃣ Rekap nilai</span></div>
+</div>
+<div class="tabs" id="tabs"><button data-i="0" class="on">1. Lab Komputer &amp; Jaringan</button><button data-i="1">2. Outdoor — Pemanjatan Tower Triangle</button><button data-i="2">3. Workshop Fiber Optik &amp; Splicing</button></div>
+<div class="meta" id="meta"><b>📍 Lab Komputer &amp; Jaringan</b> · Ruang praktik TKJ — indoor<br>📝 Tugas: Instalasi switch, crimping kabel UTP, dan konfigurasi PC client</div>
+<div class="score"><span id="scoretxt">Skor 0/26</span><div class="bar"><i id="scorebar"></i></div><span id="pct">0%</span></div>
+<div class="scene" id="sc-lab"><div class="prop" style="left:8%;top:55%">🖥️</div><div class="prop" style="left:30%;top:50%">🖥️</div><div class="prop" style="left:52%;top:50%">🖥️</div><div class="prop" style="left:74%;top:50%">🖥️</div><div class="prop" style="left:20%;top:12%">🔌</div><div class="prop" style="left:60%;top:10%">⚡</div><div class="prop" style="left:85%;top:25%">🧯</div><div class="ground"></div><div class="pin" style="left:18%;top:30%" onclick="openPin(0)">🔌<span class="n">1</span></div><div class="pin" style="left:55%;top:22%" onclick="openPin(1)">⚡<span class="n">2</span></div><div class="pin" style="left:78%;top:55%" onclick="openPin(2)">🪑<span class="n">3</span></div><div class="pin" style="left:40%;top:70%" onclick="openPin(3)">🔥<span class="n">4</span></div><div class="pin" style="left:65%;top:82%" onclick="openPin(4)">💨<span class="n">5</span></div></div>
+<div class="card" id="card"></div>
+<div class="rekap" id="rekap"></div>
+<footer>SMK TI Muhammadiyah Cikampek · DTJKT Kelas X · Elemen 4 K3LH · KYT Visual v1.0</footer>
+<script src="places_inline.js"></script>
+<script>
+let PLACES=[], cur=null, found={}, answers={};
+const LV={Tinggi:'b-hi',Sedang:'b-mid',Rendah:'b-lo'};
+const PROPS={
+lab:[{x:8,y:55,e:'🖥️'},{x:30,y:50,e:'🖥️'},{x:52,y:50,e:'🖥️'},{x:74,y:50,e:'🖥️'},{x:20,y:12,e:'🔌'},{x:60,y:10,e:'⚡'},{x:85,y:25,e:'🧯'}],
+tower:[{x:50,y:15,e:'📡'},{x:50,y:45,e:'🗼'},{x:15,y:70,e:'🌳'},{x:80,y:72,e:'🌳'},{x:50,y:80,e:'👷'}],
+fiber:[{x:15,y:55,e:'🔬'},{x:40,y:55,e:'⚙️'},{x:65,y:55,e:'📟'},{x:85,y:30,e:'🧪'}]};
+function init(){
+if(typeof PLACES_DATA!=='undefined')PLACES=PLACES_DATA;
+if(!PLACES.length)return;
+tabs.innerHTML=PLACES.map((p,i)=>'<button data-i="'+i+'" class="'+(i==0?'on':'')+'">'+(i+1)+'. '+p.nama+'</button>').join('');
+tabs.querySelectorAll('button').forEach(b=>b.onclick=()=>{tabs.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');load(+b.dataset.i);});
+load(0);
+}
+function load(i){
+cur=PLACES[i];found[cur.id]=found[cur.id]||[];answers[cur.id]=answers[cur.id]||{};
+meta.innerHTML='<b>📍 '+cur.nama+'</b> · '+cur.lokasi+'<br>📝 Tugas: '+cur.tugas;
+scene.id='sc-'+cur.id;scene.className='scene';
+scene.innerHTML=(PROPS[cur.id]||[]).map(p=>'<div class="prop" style="left:'+p.x+'%;top:'+p.y+'%">'+p.e+'</div>').join('')
++'<div class="ground"></div>'
++cur.titik.map((t,k)=>'<div class="pin'+(found[cur.id].includes(k)?' found':'')+'" style="left:'+t.x+'%;top:'+t.y+'%" onclick="openPin('+k+')">'+t.ikon+'<span class="n">'+(k+1)+'</span></div>').join('');
+card.classList.remove('show');updateScore();
+rekap.classList.remove('show');
+}
+function openPin(k){
+const t=cur.titik[k];
+if(!found[cur.id].includes(k))found[cur.id].push(k);
+card.innerHTML='<h3>'+t.ikon+' Bahaya '+(k+1)+': '+t.bahaya+'</h3>'
++'<span class="badge '+LV[t.risiko_level]+'">Risiko: '+t.risiko_level+'</span>'
++'<table><tr><td>⚠️ Risiko</td><td>'+t.risiko+'</td></tr>'
++'<tr><td>🛡️ Tindakan</td><td><b>'+t.tindakan+'</b></td></tr>'
++'<tr><td>🦺 APD</td><td>'+t.apd+'</td></tr>'
++'<tr><td>📜 Aturan</td><td>'+t.uu+'</td></tr></table>'
++'<div class="q"><b>❓ Kuis cepat:</b> Tindakan pencegahan utama bahaya ini?<br>'
++'<button onclick="jawab('+k+',1)">A. '+t.tindakan.split(',')[0]+'</button> '
++'<button onclick="jawab('+k+',0)">B. Biarkan saja, bukan urusanku</button></div>';
+card.classList.add('show');
+card.scrollIntoView({behavior:'smooth',block:'nearest'});
+scene.querySelectorAll('.pin')[k].classList.add('found');
+updateScore();
+}
+function jawab(k,benar){
+answers[cur.id][k]=benar;
+if(benar){card.querySelector('.q').innerHTML='✅ <b>Benar!</b> Kamu sudah bisa menduga bahaya seperti pekerja profesional.';}
+else{card.querySelector('.q').innerHTML='❌ <b>Kurang tepat.</b> Ingat: K3LH tanggung jawab SEMUA orang di tempat kerja. Baca lagi tindakannya di atas!';}
+updateScore();
+if(found[cur.id].length===cur.titik.length)showRekap();
+}
+function updateScore(){
+let ok=0;
+PLACES.forEach(p=>{(found[p.id]||[]).forEach(k=>ok+=1);Object.values(answers[p.id]||{}).forEach(v=>{if(v)ok+=1;});});
+const all=PLACES.reduce((a,p)=>a+p.titik.length*2,0);
+scoretxt.textContent='Skor '+ok+'/'+all;
+scorebar.style.width=(all?ok/all*100:0)+'%';
+pct.textContent=all?Math.round(ok/all*100)+'%':'';
+}
+function showRekap(){
+const t=cur.titik.length, j=Object.values(answers[cur.id]).filter(Boolean).length;
+rekap.innerHTML='<h3>🎉 '+cur.nama+' tuntas!</h3><p style="font-size:13px">Kamu menemukan '+t+'/'+t+' titik bahaya · kuis benar '+j+'/'+t+'.</p>'
++'<ol>'+cur.titik.map(x=>'<li>'+x.bahaya+' → <b>'+x.tindakan.split(',')[0]+'</b></li>').join('')+'</ol>'
++'<button onclick="next()">➡️ Lanjut tempat berikutnya</button>';
+rekap.classList.add('show');
+rekap.scrollIntoView({behavior:'smooth'});
+}
+function next(){
+const i=PLACES.indexOf(cur);
+if(i<PLACES.length-1){tabs.querySelectorAll('button')[i+1].click();window.scrollTo({top:0,behavior:'smooth'});}
+else{rekap.innerHTML='<h3>🏆 Semua tempat tuntas! Kamu Teknisi K3LH Muda.</h3><p style="font-size:13px">Ceritakan ke gurumu: bahaya apa yang paling mengejutkan + pencegahannya. Nilai akhirmu ada di bar Skor di atas.</p>';}
+}
+init();
+</script>
+</body>
+</html>

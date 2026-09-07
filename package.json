@@ -1,0 +1,8 @@
+{
+  "name": "kyt-dtjkt",
+  "version": "1.0.0",
+  "description": "KYT Visual DTJKT Elemen 4 K3LH — simulasi duga bahaya 3 tempat kerja (SMK TI Muhammadiyah Cikampek)",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "express": "4.19.2" }
+}
