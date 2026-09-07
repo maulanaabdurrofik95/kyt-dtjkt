@@ -21,7 +21,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 .tabs button{flex:1;min-width:180px;border:2px solid var(--line);background:#fff;border-radius:14px;padding:12px;font-size:14px;font-weight:700;color:var(--navy);cursor:pointer}
 .tabs button.on{border-color:var(--gold);background:var(--navy);color:#fff}
 .meta{margin:12px 22px;background:#fff;border-left:5px solid var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;line-height:1.7}
-.scene{margin:12px 22px;background:linear-gradient(180deg,#dbeafe,#f8fafc);border:1px solid var(--line);border-radius:18px;position:relative;height:400px;overflow:hidden}
+.scene{margin:12px 22px;border:1px solid var(--line);border-radius:18px;position:relative;height:400px;overflow:hidden;background-size:cover;background-position:center}
 .scene .ground{position:absolute;bottom:0;left:0;right:0;height:70px;background:#bbf7d0;border-top:3px solid #16a34a}
 .scene#sc-tower .ground{background:#fef3c7;border-color:#d97706}
 .scene#sc-fiber{background:linear-gradient(180deg,#e0e7ff,#f8fafc)}
@@ -63,7 +63,7 @@ footer{text-align:center;color:var(--mut);font-size:12px;padding:18px}
 <div class="tabs" id="tabs"><button data-i="0" class="on">1. Lab Komputer &amp; Jaringan</button><button data-i="1">2. Outdoor — Pemanjatan Tower Triangle</button><button data-i="2">3. Workshop Fiber Optik &amp; Splicing</button></div>
 <div class="meta" id="meta"><b>📍 Lab Komputer &amp; Jaringan</b> · Ruang praktik TKJ — indoor<br>📝 Tugas: Instalasi switch, crimping kabel UTP, dan konfigurasi PC client</div>
 <div class="score"><span id="scoretxt">Skor 0/26</span><div class="bar"><i id="scorebar"></i></div><span id="pct">0%</span></div>
-<div class="scene" id="sc-lab"><div class="prop" style="left:8%;top:55%">🖥️</div><div class="prop" style="left:30%;top:50%">🖥️</div><div class="prop" style="left:52%;top:50%">🖥️</div><div class="prop" style="left:74%;top:50%">🖥️</div><div class="prop" style="left:20%;top:12%">🔌</div><div class="prop" style="left:60%;top:10%">⚡</div><div class="prop" style="left:85%;top:25%">🧯</div><div class="ground"></div><div class="pin" style="left:18%;top:30%" onclick="openPin(0)">🔌<span class="n">1</span></div><div class="pin" style="left:55%;top:22%" onclick="openPin(1)">⚡<span class="n">2</span></div><div class="pin" style="left:78%;top:55%" onclick="openPin(2)">🪑<span class="n">3</span></div><div class="pin" style="left:40%;top:70%" onclick="openPin(3)">🔥<span class="n">4</span></div><div class="pin" style="left:65%;top:82%" onclick="openPin(4)">💨<span class="n">5</span></div></div>
+<div class="scene" id="sc-lab" style="background-image:url(img/place-lab.png)"><div class="ground"></div><div class="pin" style="left:18%;top:30%" onclick="openPin(0)">🔌<span class="n">1</span></div><div class="pin" style="left:55%;top:22%" onclick="openPin(1)">⚡<span class="n">2</span></div><div class="pin" style="left:78%;top:55%" onclick="openPin(2)">🪑<span class="n">3</span></div><div class="pin" style="left:40%;top:70%" onclick="openPin(3)">🔥<span class="n">4</span></div><div class="pin" style="left:65%;top:82%" onclick="openPin(4)">💨<span class="n">5</span></div></div>
 <div class="card" id="card"></div>
 <div class="rekap" id="rekap"></div>
 <footer>SMK TI Muhammadiyah Cikampek · DTJKT Kelas X · Elemen 4 K3LH · KYT Visual v1.0</footer>
@@ -86,8 +86,8 @@ function load(i){
 cur=PLACES[i];found[cur.id]=found[cur.id]||[];answers[cur.id]=answers[cur.id]||{};
 meta.innerHTML='<b>📍 '+cur.nama+'</b> · '+cur.lokasi+'<br>📝 Tugas: '+cur.tugas;
 scene.id='sc-'+cur.id;scene.className='scene';
-scene.innerHTML=(PROPS[cur.id]||[]).map(p=>'<div class="prop" style="left:'+p.x+'%;top:'+p.y+'%">'+p.e+'</div>').join('')
-+'<div class="ground"></div>'
+scene.style.backgroundImage='url(img/place-'+cur.id+'.png)';
+scene.innerHTML='<div class="ground"></div>'
 +cur.titik.map((t,k)=>'<div class="pin'+(found[cur.id].includes(k)?' found':'')+'" style="left:'+t.x+'%;top:'+t.y+'%" onclick="openPin('+k+')">'+t.ikon+'<span class="n">'+(k+1)+'</span></div>').join('');
 card.classList.remove('show');updateScore();
 rekap.classList.remove('show');
