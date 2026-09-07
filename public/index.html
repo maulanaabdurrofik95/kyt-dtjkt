@@ -42,7 +42,9 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 .card td{border:1px solid var(--line);padding:8px 10px;vertical-align:top}
 .card td:first-child{font-weight:700;color:var(--navy);width:130px;background:#f8fafc}
 .card .q{margin-top:12px;background:#fffbeb;border:1px dashed var(--gold);border-radius:10px;padding:10px 12px;font-size:13px}
-.card .q button{margin-top:8px;background:var(--navy);color:#fff;border:0;border-radius:10px;padding:9px 16px;font-weight:700;cursor:pointer}
+.card .q button{margin-top:8px;background:var(--navy);color:#fff;border:0;border-radius:10px;padding:9px 16px;font-weight:700;cursor:pointer;display:block;width:100%;text-align:left;margin-bottom:6px}
+.card .q button:hover{filter:brightness(1.2)}
+.pinimg{width:100%;max-height:220px;object-fit:cover;border-radius:12px;margin:8px 0;border:1px solid var(--line)}
 .rekap{margin:12px 22px 30px;background:var(--navy);color:#fff;border-radius:16px;padding:18px;display:none}
 .rekap.show{display:block}
 .rekap h3{color:var(--gold)}.rekap ol{margin:8px 0 8px 20px;font-size:13px;line-height:1.8}
@@ -93,15 +95,19 @@ rekap.classList.remove('show');
 function openPin(k){
 const t=cur.titik[k];
 if(!found[cur.id].includes(k))found[cur.id].push(k);
+const q=t.kuis||null;
+const abjad=['A','B','C'];
+let qhtml='';
+if(q){qhtml='<div class="q"><b>❓ Kuis:</b> '+q.tanya+'<br>'
++q.opsi.map((o,i)=>'<button onclick="jawab('+k+','+(i===q.benar?1:0)+')">'+abjad[i]+'. '+o+'</button>').join('')+'</div>';}
 card.innerHTML='<h3>'+t.ikon+' Bahaya '+(k+1)+': '+t.bahaya+'</h3>'
 +'<span class="badge '+LV[t.risiko_level]+'">Risiko: '+t.risiko_level+'</span>'
++(t.gambar?'<br><img class="pinimg" src="'+t.gambar+'" alt="ilustrasi bahaya">':'')
 +'<table><tr><td>⚠️ Risiko</td><td>'+t.risiko+'</td></tr>'
 +'<tr><td>🛡️ Tindakan</td><td><b>'+t.tindakan+'</b></td></tr>'
 +'<tr><td>🦺 APD</td><td>'+t.apd+'</td></tr>'
 +'<tr><td>📜 Aturan</td><td>'+t.uu+'</td></tr></table>'
-+'<div class="q"><b>❓ Kuis cepat:</b> Tindakan pencegahan utama bahaya ini?<br>'
-+'<button onclick="jawab('+k+',1)">A. '+t.tindakan.split(',')[0]+'</button> '
-+'<button onclick="jawab('+k+',0)">B. Biarkan saja, bukan urusanku</button></div>';
++qhtml;
 card.classList.add('show');
 card.scrollIntoView({behavior:'smooth',block:'nearest'});
 scene.querySelectorAll('.pin')[k].classList.add('found');
