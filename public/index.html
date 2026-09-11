@@ -109,27 +109,30 @@ footer{text-align:center;color:var(--mut);font-size:12px;padding:18px}
 <script src="places_inline.js"></script>
 <script>
 let PLACES=[], cur=null, found={}, answers={};
+const tabsEl=document.getElementById('tabs'),metaEl=document.getElementById('meta'),sceneEl=document.getElementById('scene'),cardEl=document.getElementById('card'),rekapEl=document.getElementById('rekap'),scoretxtEl=document.getElementById('scoretxt'),scorebarEl=document.getElementById('scorebar'),pctEl=document.getElementById('pct');
+const gateEl=document.getElementById('gate'),gateErrEl=document.getElementById('gateErr'),identEl=document.getElementById('ident'),identTxtEl=document.getElementById('identTxt'),linkKuisEl=document.getElementById('linkKuis'),pickAreaEl=document.getElementById('pickArea'),inNamaEl=document.getElementById('inNama'),inKelasEl=document.getElementById('inKelas'),btnMasukEl=document.getElementById('btnMasuk'),btnGantiEl=document.getElementById('btnGanti');
 const LV={Tinggi:'b-hi',Sedang:'b-mid',Rendah:'b-lo'};
 const PROPS={
 lab:[{x:8,y:55,e:'🖥️'},{x:30,y:50,e:'🖥️'},{x:52,y:50,e:'🖥️'},{x:74,y:50,e:'🖥️'},{x:20,y:12,e:'🔌'},{x:60,y:10,e:'⚡'},{x:85,y:25,e:'🧯'}],
 tower:[{x:50,y:15,e:'📡'},{x:50,y:45,e:'🗼'},{x:15,y:70,e:'🌳'},{x:80,y:72,e:'🌳'},{x:50,y:80,e:'👷'}],
-fiber:[{x:15,y:55,e:'🔬'},{x:40,y:55,e:'⚙️'},{x:65,y:55,e:'📟'},{x:85,y:30,e:'🧪'}]};
+fiber:[{x:15,y:55,e:'🔬'},{x:40,y:55,e:'⚙️'},{x:65,y:55,e:'📟'},{x:85,y:30,e:'🧪'}],
+bengkel:[{x:15,y:55,e:'🔧'},{x:40,y:55,e:'⚙️'},{x:65,y:55,e:'🚗'},{x:85,y:30,e:'🧪'}]};
 function init(){
 if(typeof PLACES_DATA!=='undefined')PLACES=PLACES_DATA;
 if(!PLACES.length)return;
-tabs.innerHTML=PLACES.map((p,i)=>'<button data-i="'+i+'" class="'+(i==0?'on':'')+'">'+(i+1)+'. '+p.nama+'</button>').join('');
-tabs.querySelectorAll('button').forEach(b=>b.onclick=()=>{tabs.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');load(+b.dataset.i);});
+tabsEl.innerHTML=PLACES.map((p,i)=>'<button data-i="'+i+'" class="'+(i==0?'on':'')+'">'+(i+1)+'. '+p.nama+'</button>').join('');
+tabsEl.querySelectorAll('button').forEach(b=>b.onclick=()=>{tabsEl.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');load(+b.dataset.i);});
 load(0);
 }
 function load(i){
 cur=PLACES[i];found[cur.id]=found[cur.id]||[];answers[cur.id]=answers[cur.id]||{};
-meta.innerHTML='<b>📍 '+cur.nama+'</b> · '+cur.lokasi+'<br>📝 Tugas: '+cur.tugas;
-scene.className='scene';
-scene.style.backgroundImage='url(img/place-'+cur.id+'.png)';
-scene.innerHTML='<div class="ground"></div>'
+metaEl.innerHTML='<b>📍 '+cur.nama+'</b> · '+cur.lokasi+'<br>📝 Tugas: '+cur.tugas;
+sceneEl.className='scene';
+sceneEl.style.backgroundImage='url(img/place-'+cur.id+'.png)';
+sceneEl.innerHTML='<div class="ground"></div>'
 +cur.titik.map((t,k)=>'<div class="pin'+(found[cur.id].includes(k)?' found':'')+'" style="left:'+t.x+'%;top:'+t.y+'%" onclick="openPin('+k+')">'+t.ikon+'<span class="n">'+(k+1)+'</span></div>').join('');
-card.classList.remove('show');updateScore();
-rekap.classList.remove('show');
+cardEl.classList.remove('show');updateScore();
+rekapEl.classList.remove('show');
 }
 function openPin(k){
 const t=cur.titik[k];
@@ -139,7 +142,7 @@ const abjad=['A','B','C'];
 let qhtml='';
 if(q){qhtml='<div class="q"><b>❓ Kuis:</b> '+q.tanya+'<br>'
 +q.opsi.map((o,i)=>'<button onclick="jawab('+k+','+(i===q.benar?1:0)+')">'+abjad[i]+'. '+o+'</button>').join('')+'</div>';}
-card.innerHTML='<h3>'+t.ikon+' Bahaya '+(k+1)+': '+t.bahaya+'</h3>'
+cardEl.innerHTML='<h3>'+t.ikon+' Bahaya '+(k+1)+': '+t.bahaya+'</h3>'
 +'<span class="badge '+LV[t.risiko_level]+'">Risiko: '+t.risiko_level+'</span>'
 +(t.gambar?'<br><img class="pinimg" src="'+t.gambar+'" alt="ilustrasi bahaya">':'')
 +'<table><tr><td>⚠️ Risiko</td><td>'+t.risiko+'</td></tr>'
@@ -147,15 +150,15 @@ card.innerHTML='<h3>'+t.ikon+' Bahaya '+(k+1)+': '+t.bahaya+'</h3>'
 +'<tr><td>🦺 APD</td><td>'+t.apd+'</td></tr>'
 +'<tr><td>📜 Aturan</td><td>'+t.uu+'</td></tr></table>'
 +qhtml;
-card.classList.add('show');
-card.scrollIntoView({behavior:'smooth',block:'nearest'});
-scene.querySelectorAll('.pin')[k].classList.add('found');
+cardEl.classList.add('show');
+cardEl.scrollIntoView({behavior:'smooth',block:'nearest'});
+sceneEl.querySelectorAll('.pin')[k].classList.add('found');
 updateScore();
 }
 function jawab(k,benar){
 answers[cur.id][k]=benar;
-if(benar){card.querySelector('.q').innerHTML='✅ <b>Benar!</b> Kamu sudah bisa menduga bahaya seperti pekerja profesional.';}
-else{card.querySelector('.q').innerHTML='❌ <b>Kurang tepat.</b> Ingat: K3LH tanggung jawab SEMUA orang di tempat kerja. Baca lagi tindakannya di atas!';}
+if(benar){cardEl.querySelector('.q').innerHTML='✅ <b>Benar!</b> Kamu sudah bisa menduga bahaya seperti pekerja profesional.';}
+else{cardEl.querySelector('.q').innerHTML='❌ <b>Kurang tepat.</b> Ingat: K3LH tanggung jawab SEMUA orang di tempat kerja. Baca lagi tindakannya di atas!';}
 updateScore();
 if(found[cur.id].length===cur.titik.length)showRekap();
 }
@@ -163,44 +166,44 @@ function updateScore(){
 let ok=0;
 PLACES.forEach(p=>{(found[p.id]||[]).forEach(k=>ok+=1);Object.values(answers[p.id]||{}).forEach(v=>{if(v)ok+=1;});});
 const all=PLACES.reduce((a,p)=>a+p.titik.length*2,0);
-scoretxt.textContent='Skor '+ok+'/'+all;
-scorebar.style.width=(all?ok/all*100:0)+'%';
-pct.textContent=all?Math.round(ok/all*100)+'%':'';
+scoretxtEl.textContent='Skor '+ok+'/'+all;
+scorebarEl.style.width=(all?ok/all*100:0)+'%';
+pctEl.textContent=all?Math.round(ok/all*100)+'%':'';
 }
 function showRekap(){
 const t=cur.titik.length, j=Object.values(answers[cur.id]).filter(Boolean).length;
-rekap.innerHTML='<h3>🎉 '+cur.nama+' tuntas!</h3><p style="font-size:13px">Kamu menemukan '+t+'/'+t+' titik bahaya · kuis benar '+j+'/'+t+'.</p>'
+rekapEl.innerHTML='<h3>🎉 '+cur.nama+' tuntas!</h3><p style="font-size:13px">Kamu menemukan '+t+'/'+t+' titik bahaya · kuis benar '+j+'/'+t+'.</p>'
 +'<ol>'+cur.titik.map(x=>'<li>'+x.bahaya+' → <b>'+x.tindakan.split(',')[0]+'</b></li>').join('')+'</ol>'
 +'<button onclick="next()">➡️ Lanjut tempat berikutnya</button>';
-rekap.classList.add('show');
-rekap.scrollIntoView({behavior:'smooth'});
+rekapEl.classList.add('show');
+rekapEl.scrollIntoView({behavior:'smooth'});
 }
 function next(){
 const i=PLACES.indexOf(cur);
-if(i<PLACES.length-1){tabs.querySelectorAll('button')[i+1].click();window.scrollTo({top:0,behavior:'smooth'});}
-else{rekap.innerHTML='<h3>🏆 Semua tempat tuntas! Kamu Teknisi K3LH Muda.</h3><p style="font-size:13px">Ceritakan ke gurumu: bahaya apa yang paling mengejutkan + pencegahannya. Nilai akhirmu ada di bar Skor di atas.</p>';}
+if(i<PLACES.length-1){tabsEl.querySelectorAll('button')[i+1].click();window.scrollTo({top:0,behavior:'smooth'});}
+else{rekapEl.innerHTML='<h3>🏆 Semua tempat tuntas! Kamu Teknisi K3LH Muda.</h3><p style="font-size:13px">Ceritakan ke gurumu: bahaya apa yang paling mengejutkan + pencegahannya. Nilai akhirmu ada di bar Skor di atas.</p>';}
 }
 /* === Form masuk: nama + kelas + area (sessionStorage) === */
 var AREA_LABEL={lab:'Lab Komputer & Jaringan',tower:'Tower Triangle',fiber:'Fiber Optik & Splicing',bengkel:'Bengkel'};
 var AREA_TAB={lab:0,tower:1,fiber:2};
 var pickedArea='';
 function getSiswa(){try{return JSON.parse(sessionStorage.getItem('kyt_siswa')||'null');}catch(e){return null;}}
-function gateMsg(m){gateErr.textContent=m||'';gateErr.classList.toggle('show',!!m);}
-function showIdent(s){if(!s)return;ident.style.display='flex';identTxt.textContent='👤 '+s.nama+' · 🏫 '+s.kelas+' · 📍 '+AREA_LABEL[s.area];linkKuis.href='kuis.html?area='+encodeURIComponent(s.area);}
-pickArea.querySelectorAll('button').forEach(function(b){b.onclick=function(){pickArea.querySelectorAll('button').forEach(function(x){x.classList.remove('on');});b.classList.add('on');pickedArea=b.dataset.area;gateMsg('');};});
-btnMasuk.onclick=function(){
-var nama=inNama.value.trim(),kelas=inKelas.value.trim();
-if(!nama){gateMsg('⚠️ Nama wajib diisi.');inNama.focus();return;}
-if(!kelas){gateMsg('⚠️ Kelas wajib diisi.');inKelas.focus();return;}
+function gateMsg(m){gateErrEl.textContent=m||'';gateErrEl.classList.toggle('show',!!m);}
+function showIdent(s){if(!s)return;identEl.style.display='flex';identTxtEl.textContent='👤 '+s.nama+' · 🏫 '+s.kelas+' · 📍 '+AREA_LABEL[s.area];linkKuisEl.href='kuis.html?area='+encodeURIComponent(s.area);}
+pickAreaEl.querySelectorAll('button').forEach(function(b){b.onclick=function(){pickAreaEl.querySelectorAll('button').forEach(function(x){x.classList.remove('on');});b.classList.add('on');pickedArea=b.dataset.area;gateMsg('');};});
+btnMasukEl.onclick=function(){
+var nama=inNamaEl.value.trim(),kelas=inKelasEl.value.trim();
+if(!nama){gateMsg('⚠️ Nama wajib diisi.');inNamaEl.focus();return;}
+if(!kelas){gateMsg('⚠️ Kelas wajib diisi.');inKelasEl.focus();return;}
 if(!pickedArea){gateMsg('⚠️ Pilih salah satu area kerja (4 kartu di atas).');return;}
 var s={nama:nama,kelas:kelas,area:pickedArea};
 try{sessionStorage.setItem('kyt_siswa',JSON.stringify(s));}catch(e){gateMsg('⚠️ Browser menolak penyimpanan sesi. Aktifkan storage lalu coba lagi.');return;}
 location.href='kuis.html?area='+encodeURIComponent(pickedArea);
 };
-btnGanti.onclick=function(){gate.classList.remove('hide');};
+btnGantiEl.onclick=function(){gateEl.classList.remove('hide');};
 (function restoreSiswa(){
 var s=getSiswa();
-if(s&&s.nama&&s.kelas&&s.area){gate.classList.add('hide');inNama.value=s.nama;inKelas.value=s.kelas;pickedArea=s.area;var b=pickArea.querySelector('[data-area="'+s.area+'"]');if(b)b.classList.add('on');showIdent(s);}
+if(s&&s.nama&&s.kelas&&s.area){gateEl.classList.add('hide');inNamaEl.value=s.nama;inKelasEl.value=s.kelas;pickedArea=s.area;var b=pickAreaEl.querySelector('[data-area="'+s.area+'"]');if(b)b.classList.add('on');showIdent(s);}
 })();
 init();
 </script>
