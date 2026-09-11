@@ -129,7 +129,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/lab1.png"
+        "gambar": "img/lab6.png"
       },
       {
         "x": 30,
@@ -150,7 +150,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/lab2.png"
+        "gambar": "img/lab7.png"
       },
       {
         "x": 70,
@@ -171,7 +171,7 @@
           ],
           "benar": 0
         },
-        "gambar": "img/lab3.png"
+        "gambar": "img/lab8.png"
       },
       {
         "x": 20,
@@ -192,7 +192,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/lab4.png"
+        "gambar": "img/lab9.png"
       },
       {
         "x": 65,
@@ -213,7 +213,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/lab5.png"
+        "gambar": "img/lab10.png"
       },
       {
         "x": 40,
@@ -234,7 +234,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/lab1.png"
+        "gambar": "img/lab11.png"
       },
       {
         "x": 85,
@@ -255,7 +255,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/lab2.png"
+        "gambar": "img/lab12.png"
       },
       {
         "x": 75,
@@ -276,7 +276,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/lab3.png"
+        "gambar": "img/lab13.png"
       },
       {
         "x": 92,
@@ -297,7 +297,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/lab4.png"
+        "gambar": "img/lab14.png"
       },
       {
         "x": 12,
@@ -318,7 +318,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/lab5.png"
+        "gambar": "img/lab15.png"
       },
       {
         "x": 55,
@@ -339,7 +339,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/lab1.png"
+        "gambar": "img/lab16.png"
       },
       {
         "x": 35,
@@ -360,7 +360,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/lab2.png"
+        "gambar": "img/lab17.png"
       },
       {
         "x": 60,
@@ -381,7 +381,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/lab3.png"
+        "gambar": "img/lab18.png"
       },
       {
         "x": 80,
@@ -402,7 +402,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/lab4.png"
+        "gambar": "img/lab19.png"
       },
       {
         "x": 25,
@@ -423,7 +423,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/lab5.png"
+        "gambar": "img/lab20.png"
       }
     ]
   },
@@ -536,7 +536,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/tower1.png"
+        "gambar": "img/tower5.png"
       },
       {
         "x": 72,
@@ -557,7 +557,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/tower2.png"
+        "gambar": "img/tower6.png"
       },
       {
         "x": 35,
@@ -578,7 +578,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/tower3.png"
+        "gambar": "img/tower7.png"
       },
       {
         "x": 10,
@@ -599,7 +599,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/tower4.png"
+        "gambar": "img/tower8.png"
       },
       {
         "x": 45,
@@ -620,7 +620,7 @@
           ],
           "benar": 0
         },
-        "gambar": "img/tower1.png"
+        "gambar": "img/tower9.png"
       },
       {
         "x": 65,
@@ -641,7 +641,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/tower2.png"
+        "gambar": "img/tower10.png"
       },
       {
         "x": 78,
@@ -662,7 +662,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/tower3.png"
+        "gambar": "img/tower11.png"
       },
       {
         "x": 30,
@@ -683,7 +683,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/tower4.png"
+        "gambar": "img/tower12.png"
       },
       {
         "x": 90,
@@ -704,7 +704,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/tower1.png"
+        "gambar": "img/tower13.png"
       },
       {
         "x": 50,
@@ -725,7 +725,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/tower2.png"
+        "gambar": "img/tower14.png"
       },
       {
         "x": 62,
@@ -746,7 +746,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/tower3.png"
+        "gambar": "img/tower15.png"
       },
       {
         "x": 40,
@@ -767,7 +767,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/tower4.png"
+        "gambar": "img/tower16.png"
       },
       {
         "x": 18,
@@ -788,7 +788,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/tower1.png"
+        "gambar": "img/tower17.png"
       },
       {
         "x": 84,
@@ -809,7 +809,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/tower2.png"
+        "gambar": "img/tower18.png"
       },
       {
         "x": 55,
@@ -830,7 +830,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/tower3.png"
+        "gambar": "img/tower19.png"
       },
       {
         "x": 70,
@@ -851,7 +851,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/tower4.png"
+        "gambar": "img/tower20.png"
       }
     ]
   },
@@ -964,7 +964,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/fiber1.png"
+        "gambar": "img/fiber5.png"
       },
       {
         "x": 70,
@@ -985,7 +985,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/fiber2.png"
+        "gambar": "img/fiber6.png"
       },
       {
         "x": 20,
@@ -1006,7 +1006,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/fiber3.png"
+        "gambar": "img/fiber7.png"
       },
       {
         "x": 80,
@@ -1027,7 +1027,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/fiber4.png"
+        "gambar": "img/fiber8.png"
       },
       {
         "x": 58,
@@ -1048,7 +1048,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/fiber1.png"
+        "gambar": "img/fiber9.png"
       },
       {
         "x": 35,
@@ -1069,7 +1069,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/fiber2.png"
+        "gambar": "img/fiber10.png"
       },
       {
         "x": 65,
@@ -1090,7 +1090,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/fiber3.png"
+        "gambar": "img/fiber11.png"
       },
       {
         "x": 15,
@@ -1111,7 +1111,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/fiber4.png"
+        "gambar": "img/fiber12.png"
       },
       {
         "x": 50,
@@ -1132,7 +1132,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/fiber1.png"
+        "gambar": "img/fiber13.png"
       },
       {
         "x": 75,
@@ -1153,7 +1153,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/fiber2.png"
+        "gambar": "img/fiber14.png"
       },
       {
         "x": 28,
@@ -1174,7 +1174,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/fiber3.png"
+        "gambar": "img/fiber15.png"
       },
       {
         "x": 42,
@@ -1195,7 +1195,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/fiber4.png"
+        "gambar": "img/fiber16.png"
       },
       {
         "x": 62,
@@ -1216,7 +1216,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/fiber1.png"
+        "gambar": "img/fiber17.png"
       },
       {
         "x": 55,
@@ -1237,7 +1237,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/fiber2.png"
+        "gambar": "img/fiber18.png"
       },
       {
         "x": 85,
@@ -1258,7 +1258,7 @@
           ],
           "benar": 1
         },
-        "gambar": "img/fiber3.png"
+        "gambar": "img/fiber19.png"
       },
       {
         "x": 10,
@@ -1279,7 +1279,435 @@
           ],
           "benar": 1
         },
-        "gambar": "img/fiber4.png"
+        "gambar": "img/fiber20.png"
+      }
+    ]
+  },
+  {
+    "id": "bengkel",
+    "nama": "Bengkel Otomotif & Las",
+    "lokasi": "Ruang bengkel — otomotif & las",
+    "tugas": "Gerinda, pengelasan, dongkrak, dan perawatan kendaraan",
+    "titik": [
+      {
+        "x": 12,
+        "y": 20,
+        "ikon": "🥽",
+        "bahaya": "Masuk bengkel tanpa APD lengkap",
+        "risiko": "Kena percikan, luka, benda jatuh",
+        "risiko_level": "Tinggi",
+        "tindakan": "Wajib kacamata, sarung tangan, sepatu safety sebelum masuk",
+        "apd": "Kacamata, sarung tangan, sepatu safety",
+        "uu": "Permenaker No. 08/MEN/VII/2010 (APD)",
+        "kuis": {
+          "tanya": "APD minimal masuk area bengkel (gerinda/las) adalah?",
+          "opsi": [
+            "Tanpa APD agar gerak bebas",
+            "Topi pantai",
+            "Helm/penutup kepala bila perlu, kacamata safety, sarung tangan, sepatu safety"
+          ],
+          "benar": 2
+        },
+        "gambar": "img/bengkel1.png"
+      },
+      {
+        "x": 30,
+        "y": 35,
+        "ikon": "🛠️",
+        "bahaya": "Guard gerinda dilepas / rusak",
+        "risiko": "Pecahan batu gerinda menghantam tubuh",
+        "risiko_level": "Tinggi",
+        "tindakan": "Wajib guard terpasang; tarik unit bila guard hilang",
+        "apd": "Kacamata safety, sarung tangan",
+        "uu": "UU No. 1 Tahun 1970",
+        "kuis": {
+          "tanya": "Pelindung (guard) pada gerinda tangan?",
+          "opsi": [
+            "Wajib terpasang; jangan dipakai bila guard rusak/hilang",
+            "Boleh dilepas agar lebih ringan",
+            "Dilepas bila diawasi teman"
+          ],
+          "benar": 0
+        },
+        "gambar": "img/bengkel2.png"
+      },
+      {
+        "x": 55,
+        "y": 25,
+        "ikon": "👨‍🏭",
+        "bahaya": "Mengelas tanpa helm las berfilter",
+        "risiko": "Cahaya las merusak mata, luka bakar",
+        "risiko_level": "Tinggi",
+        "tindakan": "Wajib helm las/kedok filter + apron kulit + sarung tangan las",
+        "apd": "Helm las, sarung tangan las, apron",
+        "uu": "Permenaker No. 08/MEN/VII/2010",
+        "kuis": {
+          "tanya": "APD khusus saat pengelasan (las listrik)?",
+          "opsi": [
+            "Topi biasa",
+            "Kacamata hitam biasa",
+            "Helm las/kedok dengan filter, sarung tangan las, apron kulit"
+          ],
+          "benar": 2
+        },
+        "gambar": "img/bengkel3.png"
+      },
+      {
+        "x": 75,
+        "y": 30,
+        "ikon": "😷",
+        "bahaya": "Asap las terhirup di ruang tertutup",
+        "risiko": "Keracunan gas / iritasi pernapasan",
+        "risiko_level": "Sedang",
+        "tindakan": "Ventilasi + penghisap asap, APD pernapasan bila needed",
+        "apd": "Masker/respirator",
+        "uu": "UU No. 1 Tahun 1970 (kesehatan kerja)",
+        "kuis": {
+          "tanya": "Asap las berbahaya bagi pernapasan. Pencegahannya?",
+          "opsi": [
+            "Ventilasi baik/penghisap asap dan APD pernapasan bila needed",
+            "Mengelas di ruang tertutup rapat",
+            "Mengipas asap ke wajah teman"
+          ],
+          "benar": 0
+        },
+        "gambar": "img/bengkel4.png"
+      },
+      {
+        "x": 40,
+        "y": 60,
+        "ikon": "🛢️",
+        "bahaya": "Tumpahan oli di lantai bengkel",
+        "risiko": "Terpeleset + mudah terbakar",
+        "risiko_level": "Sedang",
+        "tindakan": "Bersihkan dengan absorbent, pasang tanda licin",
+        "apd": "Sepatu anti-slip",
+        "uu": "UU No. 1 Tahun 1970",
+        "kuis": {
+          "tanya": "Tumpahan oli di lantai bengkel harus?",
+          "opsi": [
+            "Ditutup kardus selamanya",
+            "Disiram air agar menyebar",
+            "Segera dibersihkan dengan absorbent dan diberi tanda licin"
+          ],
+          "benar": 2
+        },
+        "gambar": "img/bengkel5.png"
+      },
+      {
+        "x": 65,
+        "y": 55,
+        "ikon": "📋",
+        "bahaya": "Las/gerinda tanpa izin kerja panas",
+        "risiko": "Kebakaran tanpa pengawasan/APAR siaga",
+        "risiko_level": "Sedang",
+        "tindakan": "Urus hot work permit, pastikan area bebas bahan bakar",
+        "apd": "—",
+        "uu": "PP No. 50 Tahun 2012 (SMK3)",
+        "kuis": {
+          "tanya": "Izin kerja panas (hot work permit) untuk las/gerinda diperlukan agar?",
+          "opsi": [
+            "Mempersulit pekerjaan",
+            "Memastikan area bebas bahan mudah terbakar dan pengawas siap",
+            "Menambah biaya"
+          ],
+          "benar": 1
+        },
+        "gambar": "img/bengkel6.png"
+      },
+      {
+        "x": 22,
+        "y": 70,
+        "ikon": "🏋️",
+        "bahaya": "Angkat aki/tabug dengan punggung",
+        "risiko": "Cedera punggung serius",
+        "risiko_level": "Sedang",
+        "tindakan": "Tekuk lutut, punggung lurus, beban dekat tubuh, minta bantuan",
+        "apd": "—",
+        "uu": "UU No. 1 Tahun 1970",
+        "kuis": {
+          "tanya": "Cara mengangkat beban berat (aki, tabung) yang aman?",
+          "opsi": [
+            "Membungkuk dan menghentak pinggang",
+            "Tekuk lutut, punggung lurus, beban dekat tubuh; minta bantuan bila berat",
+            "Lempar ke bahu sekaligus"
+          ],
+          "benar": 1
+        },
+        "gambar": "img/bengkel7.png"
+      },
+      {
+        "x": 50,
+        "y": 75,
+        "ikon": "🔨",
+        "bahaya": "Palu gagang retak masih dipakai",
+        "risiko": "Gagang patah, kepala palu terlempar",
+        "risiko_level": "Sedang",
+        "tindakan": "Tarik dari pemakaian, tandai rusak, perbaiki/ganti",
+        "apd": "Sarung tangan",
+        "uu": "UU No. 1 Tahun 1970",
+        "kuis": {
+          "tanya": "Perkakas rusak (palu gagang retak, kunci aus) sebaiknya?",
+          "opsi": [
+            "Ditarik dari pemakaian, diberi tanda rusak, diperbaiki/diganti",
+            "Dipinjamkan ke orang lain",
+            "Disembunyikan di laci"
+          ],
+          "benar": 0
+        },
+        "gambar": "img/bengkel8.png"
+      },
+      {
+        "x": 80,
+        "y": 65,
+        "ikon": "👕",
+        "bahaya": "Baju longgar dekat mesin berputar",
+        "risiko": "Tersangkut bor/gerinda, cedera berat",
+        "risiko_level": "Tinggi",
+        "tindakan": "Ikat rambut, rapikan pakaian, lepas aksesori",
+        "apd": "Wearpack pas badan",
+        "uu": "UU No. 1 Tahun 1970",
+        "kuis": {
+          "tanya": "Rambut panjang/baju longgar di dekat mesin berputar (bor/gerinda)?",
+          "opsi": [
+            "Tidak perlu diatur",
+            "Berbahaya bisa tersangkut; ikat rambut, rapikan pakaian, lepas aksesori",
+            "Justru membantu pendinginan"
+          ],
+          "benar": 1
+        },
+        "gambar": "img/bengkel9.png"
+      },
+      {
+        "x": 15,
+        "y": 45,
+        "ikon": "🔊",
+        "bahaya": "Mesin bising tanpa pelindung telinga",
+        "risiko": "Gangguan pendengaran permanen",
+        "risiko_level": "Rendah",
+        "tindakan": "Wajib earplug/earmuff saat kompresor/gerinda hidup",
+        "apd": "Earplug/earmuff",
+        "uu": "UU No. 1 Tahun 1970",
+        "kuis": {
+          "tanya": "Pelindung telinga (earplug/earmuff) dibutuhkan saat?",
+          "opsi": [
+            "Hanya saat hujan",
+            "Saat istirahat tidur",
+            "Mesin berisik (kompresor, gerinda) beroperasi"
+          ],
+          "benar": 2
+        },
+        "gambar": "img/bengkel10.png"
+      },
+      {
+        "x": 60,
+        "y": 80,
+        "ikon": "🚗",
+        "bahaya": "Dongkrak tanpa jack stand",
+        "risiko": "Kendaraan ambruk menimpa pekerja",
+        "risiko_level": "Tinggi",
+        "tindakan": "Pasang di permukaan rata-keras, ganjal roda, topang jack stand",
+        "apd": "Sepatu safety",
+        "uu": "UU No. 1 Tahun 1970",
+        "kuis": {
+          "tanya": "Dongkrak kendaraan harus dipasang dengan?",
+          "opsi": [
+            "Di permukaan rata-keras, ganjal roda, lalu topang dengan jack stand",
+            "Di tanah miring dan sendirian",
+            "Sambil mesin menyala dan masuk gigi"
+          ],
+          "benar": 0
+        },
+        "gambar": "img/bengkel11.png"
+      },
+      {
+        "x": 85,
+        "y": 40,
+        "ikon": "⛽",
+        "bahaya": "Bensin/thinner dekat sumber api",
+        "risiko": "Uap meledak / kebakaran",
+        "risiko_level": "Tinggi",
+        "tindakan": "Simpan tertutup di tempat khusus berventilasi jauh dari api",
+        "apd": "—",
+        "uu": "Permenaker No. 04/MEN/1980",
+        "kuis": {
+          "tanya": "Bahan mudah terbakar (bensin, thinner) di bengkel disimpan?",
+          "opsi": [
+            "Di bawah mesin panas",
+            "Di tempat khusus berventilasi, tertutup, jauh dari sumber api",
+            "Di botol minum terbuka"
+          ],
+          "benar": 1
+        },
+        "gambar": "img/bengkel12.png"
+      },
+      {
+        "x": 35,
+        "y": 20,
+        "ikon": "🧯",
+        "bahaya": "APAR jauh / terkunci dari area las",
+        "risiko": "Api kecil tak tertangani",
+        "risiko_level": "Sedang",
+        "tindakan": "APAR siaga dekat area kerja, aman dari percikan, mudah dijangkau",
+        "apd": "—",
+        "uu": "Permenaker No. 04/MEN/1980 (APAR)",
+        "kuis": {
+          "tanya": "APAR di area bengkel las diletakkan?",
+          "opsi": [
+            "Siaga dekat area kerja tapi aman dari percikan, mudah dijangkau",
+            "Di luar gedung",
+            "Di bawah tumpukan ban"
+          ],
+          "benar": 0
+        },
+        "gambar": "img/bengkel13.png"
+      },
+      {
+        "x": 48,
+        "y": 45,
+        "ikon": "🩸",
+        "bahaya": "Luka sayat / kena gerinda",
+        "risiko": "Perdarahan, infeksi",
+        "risiko_level": "Sedang",
+        "tindakan": "Tekan kain bersih, bersihkan, tutup luka, cari bantuan medis",
+        "apd": "Sarung tangan",
+        "uu": "Permenaker No. 15/MEN/VIII/2008 (P3K)",
+        "kuis": {
+          "tanya": "Luka sayat/terkena gerinda di bengkel. Pertolongan pertama?",
+          "opsi": [
+            "Hentikan perdarahan dengan tekan kain bersih, bersihkan, tutup luka, cari bantuan medis",
+            "Dibiarkan berdarah",
+            "Ditempel oli"
+          ],
+          "benar": 0
+        },
+        "gambar": "img/bengkel14.png"
+      },
+      {
+        "x": 70,
+        "y": 72,
+        "ikon": "🔌",
+        "bahaya": "Kabel las/gerinda terkelupas",
+        "risiko": "Sengatan listrik / kebakaran",
+        "risiko_level": "Tinggi",
+        "tindakan": "Hentikan pakai, perbaiki/ganti oleh teknisi",
+        "apd": "Sarung tangan isolasi",
+        "uu": "UU No. 1 Tahun 1970 + PUIL",
+        "kuis": {
+          "tanya": "Kabel las/gerinda yang terkelupas harus?",
+          "opsi": [
+            "Dilakban seadanya dan terus dipakai",
+            "Dihentikan pakai, diperbaiki/diganti teknisi; jangan dipakai",
+            "Dibiarkan terinjak"
+          ],
+          "benar": 1
+        },
+        "gambar": "img/bengkel15.png"
+      },
+      {
+        "x": 28,
+        "y": 55,
+        "ikon": "🧤",
+        "bahaya": "Sarung tangan tak sesuai jenis kerja",
+        "risiko": "Luka / luka bakar tangan",
+        "risiko_level": "Sedang",
+        "tindakan": "Gerinda: pas anti-getar; las: kulit tahan panas",
+        "apd": "Sarung tangan sesuai kerja",
+        "uu": "Permenaker No. 08/MEN/VII/2010",
+        "kuis": {
+          "tanya": "Sarung tangan yang tepat untuk gerinda vs las?",
+          "opsi": [
+            "Gerinda pakai sarung tangan longgar tebal berlebih",
+            "Las cukup tangan kosong",
+            "Gerinda: sarung tangan pas anti-getar; las: sarung tangan kulit tahan panas"
+          ],
+          "benar": 2
+        },
+        "gambar": "img/bengkel16.png"
+      },
+      {
+        "x": 52,
+        "y": 32,
+        "ikon": "💡",
+        "bahaya": "Area potong gelap / kurang terang",
+        "risiko": "Salah potong, kecelakaan mesin",
+        "risiko_level": "Rendah",
+        "tindakan": "Pastikan terang merata di area potong/putar",
+        "apd": "—",
+        "uu": "UU No. 1 Tahun 1970",
+        "kuis": {
+          "tanya": "Penerangan area kerja bengkel harus?",
+          "opsi": [
+            "Terang merata agar area potong/putar terlihat jelas",
+            "Silau langsung ke mata",
+            "Hanya lampu HP"
+          ],
+          "benar": 0
+        },
+        "gambar": "img/bengkel17.png"
+      },
+      {
+        "x": 78,
+        "y": 82,
+        "ikon": "⚙️",
+        "bahaya": "Kompresor tak pernah diperiksa",
+        "risiko": "Ledakan tekanan / selang jebol",
+        "risiko_level": "Sedang",
+        "tindakan": "Rutin cek tekanan, katup pengaman, selang, kuras kondensat",
+        "apd": "—",
+        "uu": "UU No. 1 Tahun 1970",
+        "kuis": {
+          "tanya": "Kompresor angin perlu diperiksa?",
+          "opsi": [
+            "Hanya saat meledak",
+            "Rutin: tekanan, katup pengaman, selang, dan kuras air kondensat",
+            "Tidak pernah"
+          ],
+          "benar": 1
+        },
+        "gambar": "img/bengkel18.png"
+      },
+      {
+        "x": 18,
+        "y": 85,
+        "ikon": "🧰",
+        "bahaya": "Perkakas berserakan di lantai",
+        "risiko": "Tersandung / terinjak kunci",
+        "risiko_level": "Rendah",
+        "tindakan": "Bersihkan dan kembalikan ke kotak/rak tiap selesai kerja",
+        "apd": "Sepatu safety",
+        "uu": "UU No. 1 Tahun 1970 (housekeeping)",
+        "kuis": {
+          "tanya": "Selesai bekerja, kunci pas dan perkakas sebaiknya?",
+          "opsi": [
+            "Dibersihkan dan dikembalikan ke kotak/raknya",
+            "Dibiarkan berserakan di lantai",
+            "Dibawa pulang semua"
+          ],
+          "benar": 0
+        },
+        "gambar": "img/bengkel19.png"
+      },
+      {
+        "x": 90,
+        "y": 78,
+        "ikon": "🚪",
+        "bahaya": "Jalur evakuasi tak terpampang",
+        "risiko": "Panik / terjebak saat darurat",
+        "risiko_level": "Sedang",
+        "tindakan": "Nomor darurat + jalur evakuasi diketahui semua & terpampang",
+        "apd": "—",
+        "uu": "Permenaker No. 04/MEN/1980",
+        "kuis": {
+          "tanya": "Nomor darurat dan jalur evakuasi bengkel harus?",
+          "opsi": [
+            "Diketahui semua siswa dan terpampang jelas",
+            "Tidak perlu ada",
+            "Dihafal guru saja"
+          ],
+          "benar": 0
+        },
+        "gambar": "img/bengkel20.png"
       }
     ]
   }
