@@ -49,11 +49,50 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 .rekap.show{display:block}
 .rekap h3{color:var(--gold)}.rekap ol{margin:8px 0 8px 20px;font-size:13px;line-height:1.8}
 .rekap button{background:var(--gold);color:var(--navy);border:0;border-radius:10px;padding:10px 18px;font-weight:800;cursor:pointer;margin-top:6px}
+.gate{position:fixed;inset:0;background:rgba(31,58,95,.93);z-index:50;display:flex;align-items:flex-start;justify-content:center;padding:26px 14px;overflow:auto}
+.gate.hide{display:none}
+.gate .box{background:#fff;border-radius:20px;max-width:620px;width:100%;padding:26px 24px;border-top:6px solid var(--gold)}
+.gate h2{color:var(--navy);font-size:20px;text-align:center}
+.gate p.sub{text-align:center;color:var(--mut);font-size:13px;margin:6px 0 6px;line-height:1.6}
+.gate label{display:block;font-size:13px;font-weight:700;color:var(--navy);margin:12px 0 6px}
+.gate input{width:100%;border:2px solid var(--line);border-radius:12px;padding:11px 14px;font-size:14px;font-family:inherit}
+.gate input:focus{outline:none;border-color:var(--gold)}
+.pick{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pick button{border:2px solid var(--line);background:#f8fafc;border-radius:14px;padding:14px 10px;font-size:13px;font-weight:700;color:var(--navy);cursor:pointer;font-family:inherit}
+.pick button small{display:block;font-weight:400;color:var(--mut);font-size:11px;margin-top:4px}
+.pick button.on{border-color:var(--gold);background:var(--navy);color:#fff}
+.pick button.on small{color:#fde68a}
+.gate .err{display:none;background:#fef2f2;border:1px solid #fecaca;color:var(--hi);font-size:13px;border-radius:10px;padding:9px 12px;margin-top:12px}
+.gate .err.show{display:block}
+.btn-masuk{width:100%;margin-top:16px;background:var(--gold);color:var(--navy);border:0;border-radius:12px;padding:13px;font-size:15px;font-weight:800;cursor:pointer;font-family:inherit}
+.btn-masuk:hover{filter:brightness(1.05)}
+.ident{margin:12px 22px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:9px 14px;font-size:13px;color:var(--navy);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.ident button{margin-left:auto;background:var(--navy);color:#fff;border:0;border-radius:8px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer}
+.kuislink{display:inline-block;margin-top:12px;background:var(--navy);color:#fff!important;text-decoration:none;font-weight:800;font-size:14px;padding:12px 24px;border-radius:12px}
+@media(max-width:600px){.pick{grid-template-columns:1fr}}
 footer{text-align:center;color:var(--mut);font-size:12px;padding:18px}
 @media(max-width:600px){.scene{height:330px}.prop{font-size:34px}}
 </style>
 </head>
 <body>
+<div class="gate" id="gate"><div class="box">
+<h2>🎓 Selamat Datang di KYT Visual</h2>
+<p class="sub">Isi identitas + pilih <b>area kerja</b> sebelum mulai.<br>Menentukan area kuis <b>Tebak Bahaya</b> (20 soal).</p>
+<label for="inNama">👤 Nama lengkap</label>
+<input id="inNama" type="text" placeholder="cth: Budi Santoso" autocomplete="name" maxlength="60">
+<label for="inKelas">🏫 Kelas</label>
+<input id="inKelas" type="text" placeholder="cth: X TKJ 1" maxlength="30">
+<label>📍 Pilih area kerja</label>
+<div class="pick" id="pickArea">
+<button type="button" data-area="lab">🖥️ Lab Komputer<small>Praktik TKJ — indoor</small></button>
+<button type="button" data-area="tower">🗼 Tower Triangle<small>Outdoor pemanjatan</small></button>
+<button type="button" data-area="fiber">🔬 Fiber Optik<small>Workshop splicing</small></button>
+<button type="button" data-area="bengkel">🔧 Bengkel<small>Peralatan &amp; mesin</small></button>
+</div>
+<div class="err" id="gateErr"></div>
+<button class="btn-masuk" id="btnMasuk" type="button">🚀 Masuk &amp; Mulai</button>
+</div></div>
+<div class="ident" id="ident" style="display:none"><span id="identTxt"></span><button id="btnGanti" type="button">Ganti</button><a class="kuislink" id="linkKuis" href="kuis.html" style="margin:0;padding:7px 14px;font-size:12px">🎯 Mode Tebak Bahaya</a></div>
 <div class="kop"><div class="logo">M</div><div><b>SMK TI Muhammadiyah Cikampek</b><small>DTJKT Fase E · Elemen 4 K3LH · KYT Visual Interaktif</small></div></div>
 <div class="hero">
 <h1>KYT Visual: <span>Duga Bahaya</span> di Tempat Kerja</h1>
@@ -141,6 +180,29 @@ const i=PLACES.indexOf(cur);
 if(i<PLACES.length-1){tabs.querySelectorAll('button')[i+1].click();window.scrollTo({top:0,behavior:'smooth'});}
 else{rekap.innerHTML='<h3>🏆 Semua tempat tuntas! Kamu Teknisi K3LH Muda.</h3><p style="font-size:13px">Ceritakan ke gurumu: bahaya apa yang paling mengejutkan + pencegahannya. Nilai akhirmu ada di bar Skor di atas.</p>';}
 }
+/* === Form masuk: nama + kelas + area (sessionStorage) === */
+var AREA_LABEL={lab:'Lab Komputer & Jaringan',tower:'Tower Triangle',fiber:'Fiber Optik & Splicing',bengkel:'Bengkel'};
+var AREA_TAB={lab:0,tower:1,fiber:2};
+var pickedArea='';
+function getSiswa(){try{return JSON.parse(sessionStorage.getItem('kyt_siswa')||'null');}catch(e){return null;}}
+function gateMsg(m){gateErr.textContent=m||'';gateErr.classList.toggle('show',!!m);}
+function showIdent(s){if(!s)return;ident.style.display='flex';identTxt.textContent='👤 '+s.nama+' · 🏫 '+s.kelas+' · 📍 '+AREA_LABEL[s.area];linkKuis.href='kuis.html?area='+encodeURIComponent(s.area);}
+pickArea.querySelectorAll('button').forEach(function(b){b.onclick=function(){pickArea.querySelectorAll('button').forEach(function(x){x.classList.remove('on');});b.classList.add('on');pickedArea=b.dataset.area;gateMsg('');};});
+btnMasuk.onclick=function(){
+var nama=inNama.value.trim(),kelas=inKelas.value.trim();
+if(!nama){gateMsg('⚠️ Nama wajib diisi.');inNama.focus();return;}
+if(!kelas){gateMsg('⚠️ Kelas wajib diisi.');inKelas.focus();return;}
+if(!pickedArea){gateMsg('⚠️ Pilih salah satu area kerja (4 kartu di atas).');return;}
+var s={nama:nama,kelas:kelas,area:pickedArea};
+try{sessionStorage.setItem('kyt_siswa',JSON.stringify(s));}catch(e){gateMsg('⚠️ Browser menolak penyimpanan sesi. Aktifkan storage lalu coba lagi.');return;}
+gate.classList.add('hide');showIdent(s);
+if(PLACES.length&&AREA_TAB[pickedArea]!=null&&AREA_TAB[pickedArea]<PLACES.length){tabs.querySelectorAll('button')[AREA_TAB[pickedArea]].click();}
+};
+btnGanti.onclick=function(){gate.classList.remove('hide');};
+(function restoreSiswa(){
+var s=getSiswa();
+if(s&&s.nama&&s.kelas&&s.area){gate.classList.add('hide');inNama.value=s.nama;inKelas.value=s.kelas;pickedArea=s.area;var b=pickArea.querySelector('[data-area="'+s.area+'"]');if(b)b.classList.add('on');showIdent(s);}
+})();
 init();
 </script>
 </body>

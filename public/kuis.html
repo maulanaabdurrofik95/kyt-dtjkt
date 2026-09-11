@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tebak Bahaya — Kuis KYT Visual DTJKT</title>
+<meta name="description" content="Mode Tebak Bahaya: 20 soal pilihan ganda per area kerja. SMK TI Muhammadiyah Cikampek.">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+:root{--navy:#1F3A5F;--gold:#D9A04A;--bg:#f4f6fa;--card:#fff;--txt:#111;--mut:#5b6b7f;--ok:#15803d;--mid:#b45309;--hi:#b91c1c;--line:#dbe3ee}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--txt);max-width:960px;margin:0 auto;min-height:100vh}
+.kop{background:var(--navy);color:#fff;padding:18px 22px;display:flex;gap:14px;align-items:center}
+.kop .logo{width:52px;height:52px;border-radius:12px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;color:var(--navy)}
+.kop b{font-size:17px;display:block}.kop small{font-size:12px;opacity:.85}
+.kop a{margin-left:auto;color:var(--gold);font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap}
+.wrap{padding:18px 22px 40px}
+.ident{background:#fff;border:1px solid var(--line);border-radius:12px;padding:9px 14px;font-size:13px;color:var(--navy);margin-bottom:12px}
+.areas{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.areas button{flex:1;min-width:140px;border:2px solid var(--line);background:#fff;border-radius:12px;padding:10px;font-size:13px;font-weight:700;color:var(--navy);cursor:pointer;font-family:inherit}
+.areas button.on{border-color:var(--gold);background:var(--navy);color:#fff}
+.banner{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;margin-bottom:12px}
+.banner img{width:100%;max-height:230px;object-fit:cover;display:block}
+.banner .cap{padding:10px 16px;font-size:13px;color:var(--navy);font-weight:700}
+.banner .cap small{display:block;color:var(--mut);font-weight:400}
+.topbar{display:flex;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.prog{flex:1;min-width:160px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:9px 14px;font-size:13px;font-weight:700;color:var(--navy)}
+.prog .bar{height:8px;background:#e5e7eb;border-radius:99px;overflow:hidden;margin-top:6px}
+.prog .bar i{display:block;height:100%;width:0;background:var(--gold)}
+.timer{background:var(--navy);color:#fff;border-radius:12px;padding:9px 16px;font-size:14px;font-weight:800;min-width:110px;text-align:center}
+.timer.low{background:var(--hi)}
+.skorbox{background:#fff;border:1px solid var(--line);border-radius:12px;padding:9px 16px;font-size:14px;font-weight:800;color:var(--navy)}
+.qcard{background:#fff;border-radius:16px;padding:20px;border-top:5px solid var(--gold);border-left:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.qcard .lvl{display:inline-block;font-size:11px;font-weight:800;padding:3px 10px;border-radius:99px;color:#fff;margin-bottom:8px}
+.l-Tinggi{background:var(--hi)}.l-Sedang{background:var(--mid)}.l-Rendah{background:var(--ok)}
+.qcard h2{color:var(--navy);font-size:17px;line-height:1.6;margin-bottom:12px}
+.opsi button{display:block;width:100%;text-align:left;margin-bottom:8px;background:#f8fafc;border:2px solid var(--line);border-radius:12px;padding:11px 14px;font-size:14px;cursor:pointer;font-family:inherit;color:var(--txt)}
+.opsi button:hover:not(:disabled){border-color:var(--gold)}
+.opsi button:disabled{cursor:default;opacity:.95}
+.opsi button.benar{border-color:var(--ok);background:#f0fdf4}
+.opsi button.salah{border-color:var(--hi);background:#fef2f2}
+.fb{margin-top:12px;border-radius:12px;padding:12px 14px;font-size:13px;line-height:1.7;display:none}
+.fb.show{display:block}
+.fb.ok{background:#f0fdf4;border:1px solid #bbf7d0}
+.fb.no{background:#fef2f2;border:1px solid #fecaca}
+.fb.skip{background:#fffbeb;border:1px solid var(--gold)}
+.navrow{display:flex;gap:10px;margin-top:14px}
+.navrow button{flex:1;border:0;border-radius:12px;padding:12px;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit}
+#btnNext{background:var(--navy);color:#fff;display:none}
+#btnNext.show{display:block}
+#btnSkip{background:#fff;border:2px solid var(--line);color:var(--navy)}
+.hasil{display:none;background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.hasil.show{display:block}
+#hasilCard{background:var(--navy);color:#fff;padding:28px 26px;text-align:center}
+#hasilCard .sk{font-size:12px;letter-spacing:2px;color:var(--gold);font-weight:800}
+#hasilCard h2{font-size:24px;margin:8px 0 2px}
+#hasilCard .nm{font-size:15px;font-weight:700}
+#hasilCard .dt{font-size:12px;opacity:.85;margin-top:2px}
+#hasilCard .skor{font-size:56px;font-weight:800;color:var(--gold);margin:12px 0 0;line-height:1}
+#hasilCard .max{font-size:13px;opacity:.9}
+#hasilCard .pred{display:inline-block;margin-top:10px;background:var(--gold);color:var(--navy);font-weight:800;font-size:14px;border-radius:99px;padding:6px 22px}
+#hasilCard .foot{margin-top:14px;font-size:11px;opacity:.75}
+.hasil .aksi{padding:16px;display:flex;gap:10px;flex-wrap:wrap;background:#fff}
+.hasil .aksi button{flex:1;min-width:150px;border:0;border-radius:12px;padding:12px;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit}
+#btnSimpan{background:var(--gold);color:var(--navy)}
+#btnUlangi{background:var(--navy);color:#fff}
+#btnArea{background:#fff;border:2px solid var(--line)!important;color:var(--navy)}
+.mini{margin-top:14px;background:#fff;border-radius:16px;padding:20px;border-top:5px solid var(--hi);display:none}
+.mini.show{display:block}
+.mini h3{color:var(--navy);font-size:16px;margin-bottom:6px}
+.mini p{font-size:13px;color:var(--mut);line-height:1.6;margin-bottom:8px}
+.mini label{display:block;font-size:13px;font-weight:700;color:var(--navy);margin:10px 0 5px}
+.mini input{width:100%;border:2px solid var(--line);border-radius:12px;padding:10px 14px;font-size:14px;font-family:inherit}
+.mini .pick{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px}
+.mini .pick button{border:2px solid var(--line);background:#f8fafc;border-radius:12px;padding:10px;font-size:13px;font-weight:700;color:var(--navy);cursor:pointer;font-family:inherit}
+.mini .pick button.on{border-color:var(--gold);background:var(--navy);color:#fff}
+.mini .go{width:100%;margin-top:14px;background:var(--gold);color:var(--navy);border:0;border-radius:12px;padding:12px;font-size:15px;font-weight:800;cursor:pointer;font-family:inherit}
+.err{background:#fef2f2;border:1px solid #fecaca;color:var(--hi);font-size:13px;border-radius:10px;padding:10px 12px;margin-top:10px;display:none}
+.err.show{display:block}
+footer{text-align:center;color:var(--mut);font-size:12px;padding:18px}
+@media(max-width:600px){.mini .pick{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="kop"><div class="logo">M</div><div><b>SMK TI Muhammadiyah Cikampek</b><small>DTJKT Fase E · Elemen 4 K3LH · Mode Tebak Bahaya</small></div><a href="index.html">← KYT Visual</a></div>
+<div class="wrap">
+
+<div class="ident" id="ident">👤 <b id="idNama">–</b> · 🏫 <span id="idKelas">–</span> · 📍 <span id="idArea">–</span></div>
+
+<div class="areas" id="areaBar">
+<button type="button" data-area="lab">🖥️ Lab</button>
+<button type="button" data-area="tower">🗼 Tower</button>
+<button type="button" data-area="fiber">🔬 Fiber</button>
+<button type="button" data-area="bengkel">🔧 Bengkel</button>
+</div>
+
+<div class="mini" id="miniGate">
+<h3>⚠️ Isi identitas dulu</h3>
+<p>Mode Tebak Bahaya butuh nama, kelas, dan area — sama seperti form masuk di halaman utama.</p>
+<label for="mNama">👤 Nama lengkap</label>
+<input id="mNama" type="text" placeholder="cth: Budi Santoso" maxlength="60">
+<label for="mKelas">🏫 Kelas</label>
+<input id="mKelas" type="text" placeholder="cth: X TKJ 1" maxlength="30">
+<label>📍 Area kerja</label>
+<div class="pick" id="mPick">
+<button type="button" data-area="lab">🖥️ Lab Komputer</button>
+<button type="button" data-area="tower">🗼 Tower Triangle</button>
+<button type="button" data-area="fiber">🔬 Fiber Optik</button>
+<button type="button" data-area="bengkel">🔧 Bengkel</button>
+</div>
+<div class="err" id="mErr"></div>
+<button class="go" id="mGo" type="button">🚀 Mulai Kuis</button>
+</div>
+
+<div id="play">
+<div class="banner"><img id="areaImg" src="img/place-lab.png" alt="ilustrasi area kerja"><div class="cap"><span id="areaNama">Lab Komputer &amp; Jaringan</span><small id="areaDesc">20 soal · 5 poin per jawaban benar · 30 detik per soal</small></div></div>
+<div class="topbar">
+<div class="prog"><span id="progTxt">Soal 1/20</span><div class="bar"><i id="progBar"></i></div></div>
+<div class="timer" id="timer">⏱ 30</div>
+<div class="skorbox">⭐ <span id="skorTxt">0</span></div>
+</div>
+<div class="qcard" id="qcard">
+<span class="lvl l-Sedang" id="qLvl">Sedang</span>
+<h2 id="qTanya">Memuat soal…</h2>
+<div class="opsi" id="qOpsi"></div>
+<div class="fb" id="qFb"></div>
+<div class="navrow">
+<button id="btnSkip" type="button">⏭ Lewati (0 poin)</button>
+<button id="btnNext" type="button">Soal berikutnya →</button>
+</div>
+</div>
+</div>
+
+<div class="hasil" id="hasil">
+<div id="hasilCard">
+<div class="sk">TEBAK BAHAYA · KYT VISUAL DTJKT</div>
+<h2 id="hArea">Lab Komputer &amp; Jaringan</h2>
+<div class="nm" id="hNama">Nama — Kelas</div>
+<div class="dt" id="hTgl">tanggal</div>
+<div class="skor" id="hSkor">0</div>
+<div class="max" id="hMax">dari 100 · 0/20 benar</div>
+<div><span class="pred" id="hPred"> predikat </span></div>
+<div class="foot">SMK TI Muhammadiyah Cikampek · DTJKT Kelas X · Elemen 4 K3LH</div>
+</div>
+<div class="aksi">
+<button id="btnSimpan" type="button">💾 Simpan Hasil (PNG)</button>
+<button id="btnUlangi" type="button">🔄 Ulangi</button>
+<button id="btnArea" type="button">📍 Ganti Area</button>
+</div>
+</div>
+
+</div>
+<footer>SMK TI Muhammadiyah Cikampek · DTJKT Kelas X · Elemen 4 K3LH · Tebak Bahaya v1.0</footer>
+<script>
+(function(){
+'use strict';
+var AREA_LABEL={lab:'Lab Komputer & Jaringan',tower:'Tower Triangle (Outdoor)',fiber:'Fiber Optik & Splicing',bengkel:'Bengkel'};
+var AREA_IMG={lab:'img/place-lab.png',tower:'img/place-tower.png',fiber:'img/place-fiber.png',bengkel:'img/place-lab.png'};
+var PER_SOAL=30, POIN=5, N_SOAL=20;
+var area='',soal=[],idx=0,skor=0,benar=0,sisa=PER_SOAL,tick=null,locked=false;
+var mPick='';
+function $(id){return document.getElementById(id);}
+function getSiswa(){try{return JSON.parse(sessionStorage.getItem('kyt_siswa')||'null');}catch(e){return null;}}
+function qsArea(){try{var m=location.search.match(/[?&]area=([^&]+)/);return m?decodeURIComponent(m[1]):'';}catch(e){return '';}}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t;}return a;}
+/* Normalisasi quiz.json format {area:[{id,nama,soal:[{tanya,opsi[4],benar,level,penjelasan}]}]} + toleransi bentuk lain */
+function extractSoal(data,key){
+if(!data||typeof data!=='object')return [];
+var node=data[key];
+if(node===undefined&&Array.isArray(data.area)){
+/* format nyata: {area:[{id,nama,soal:[...]}]} — pilih grup sesuai id area */
+for(var gi=0;gi<data.area.length;gi++){if(data.area[gi]&&data.area[gi].id===key){node=[data.area[gi]];break;}}
+}
+if(node===undefined&&Array.isArray(data))node=data;
+if(!node){
+var ks=Object.keys(data);
+if(!ks.length)return [];
+node=data[ks[0]];
+}
+var out=[];
+function pushSoal(s){
+if(!s||!s.tanya||!Array.isArray(s.opsi)||s.opsi.length<2)return;
+out.push({tanya:String(s.tanya),opsi:s.opsi.slice(0,4).map(String),benar:Number(s.benar)||0,level:s.level||s.risiko_level||'Sedang',penjelasan:s.penjelasan||s.pembahasan||''});
+}
+if(Array.isArray(node)){
+node.forEach(function(g){
+if(g&&Array.isArray(g.soal))g.soal.forEach(pushSoal);
+else if(g&&g.tanya)pushSoal(g);
+});
+}else if(node&&typeof node==='object'){
+if(Array.isArray(node.soal))node.soal.forEach(pushSoal);
+else Object.keys(node).forEach(function(k){var g=node[k];if(g&&Array.isArray(g.soal))g.soal.forEach(pushSoal);else if(Array.isArray(g))g.forEach(pushSoal);});
+}
+return out.filter(function(s){return s.benar>=0&&s.benar<s.opsi.length;});
+}
+function fallbackSoal(key){
+var bank={
+lab:[['Kabel power berserakan di lorong lab. Tindakan paling tepat?',0],['Stop kontak menumpuk 6 colokan dan terasa panas. Apa yang harus dilakukan?',0],['Kursi roda pecah masih dipakai praktikum. Sikap yang benar?',2],['Mengapa APAR kedaluwarsa di lab sangat berbahaya?',0]],
+tower:[['Sebelum memanjat tower triangle, hal pertama yang wajib dicek?',0],['Saat bekerja di ketinggian tower, APD utama yang wajib dipakai?',1]],
+fiber:[['Serpihan potongan fiber optik di meja splicing harus?',1],['Splicer menyala tapi ruangan berdebu. Tindakan tepat?',2]],
+bengkel:[['Lantai bengkel licin karena tumpahan oli. Tindakan pertama?',1],['Gerinda tanpa pelindung (guard) sebaiknya?',0],['Kabel las mengelupas terlihat tembaganya. Tindakan tepat?',2],['Bekerja dengan mesin bubut, pakaian yang aman?',1]]
+};
+var o={lab:['Rapikan dengan cable tray/duct dan beri label tiap kabel|Tutupi dengan karpet saja|Biarkan saja, nanti ada yang membereskan','Cabut sebagian, bagi beban ke MCB terpisah sesuai daya|Tambah colokan cabang lagi|Siram air dingin agar tidak panas','Tetap dipakai asal hati-hati|Pindahkan ke kelas lain|Tandai rusak, isolasi, laporkan ke sarana','Api kecil tak tertangani sejak awal hingga membesar|Membuat ruangan terlihat kotor|Harga APAR baru terlalu mahal']};
+var list=(bank[key]||bank.bengkel),out=[];
+for(var r=0;r<N_SOAL;r++){
+var b=list[r%list.length],q=b[0],k=b[1];
+var opsi=(o[key]&&o[key][r%list.length])?o[key][r%list.length].split('|'):['Melapor dan memperbaikinya sesuai prosedur K3|Mengabaikannya karena bukan tugas saya|Menunggu orang lain yang menangani|Melanjutkan kerja seperti biasa'];
+out.push({tanya:'['+(key.toUpperCase())+' '+(r+1)+'] '+q,opsi:opsi,benar:k%(opsi.length),level:['Rendah','Sedang','Tinggi'][r%3],penjelasan:'Ikuti prosedur K3LH: kenali bahaya, cegah, dan laporkan.'});
+}
+return out;
+}
+function setArea(a){
+area=AREA_LABEL[a]?a:'lab';
+document.querySelectorAll('#areaBar button').forEach(function(b){b.classList.toggle('on',b.dataset.area===area);});
+$('areaImg').src=AREA_IMG[area]||AREA_IMG.lab;
+$('areaImg').alt='ilustrasi '+AREA_LABEL[area];
+$('areaNama').textContent='📍 '+AREA_LABEL[area];
+}
+function startQuiz(){
+idx=0;skor=0;benar=0;
+$('hasil').classList.remove('show');
+$('play').style.display='block';
+renderSoal();
+}
+function stopTick(){if(tick){clearInterval(tick);tick=null;}}
+function renderSoal(){
+locked=false;
+var s=soal[idx];
+$('progTxt').textContent='Soal '+(idx+1)+'/'+soal.length;
+$('progBar').style.width=((idx)/soal.length*100)+'%';
+$('skorTxt').textContent=skor;
+$('qLvl').textContent=s.level||'Sedang';
+$('qLvl').className='lvl l-'+(s.level||'Sedang');
+$('qTanya').textContent=s.tanya;
+$('qFb').classList.remove('show','ok','no','skip');
+$('btnNext').classList.remove('show');
+$('btnNext').textContent=(idx===soal.length-1)?'Lihat hasil 🏁':'Soal berikutnya →';
+$('btnSkip').style.display='block';
+var box=$('qOpsi');box.innerHTML='';
+var abjad=['A','B','C','D'];
+s.opsi.forEach(function(t,i){
+var b=document.createElement('button');
+b.type='button';b.textContent=abjad[i]+'. '+t;
+b.onclick=function(){jawab(i,b);};
+box.appendChild(b);
+});
+sisa=PER_SOAL;$('timer').textContent='⏱ '+sisa;$('timer').classList.remove('low');
+stopTick();
+tick=setInterval(function(){
+sisa--;
+$('timer').textContent='⏱ '+sisa;
+if(sisa<=10)$('timer').classList.add('low');
+if(sisa<=0){stopTick();autoSkip();}
+},1000);
+}
+function kunci(){
+locked=true;stopTick();
+var btns=$('qOpsi').querySelectorAll('button');
+btns.forEach(function(b){b.disabled=true;});
+return btns;
+}
+function jawab(i,btn){
+if(locked)return;
+var s=soal[idx],btns=kunci();
+btns[s.benar].classList.add('benar');
+var fb=$('qFb');
+if(i===s.benar){
+skor+=POIN;benar++;
+btn.classList.add('benar');
+fb.className='fb show ok';
+fb.innerHTML='✅ <b>Benar! +'+POIN+' poin.</b>'+(s.penjelasan?'<br>💡 '+s.penjelasan:'');
+}else{
+btn.classList.add('salah');
+fb.className='fb show no';
+fb.innerHTML='❌ <b>Kurang tepat.</b> Jawaban benar: <b>'+['A','B','C','D'][s.benar]+'</b>'+(s.penjelasan?'<br>💡 '+s.penjelasan:'');
+}
+$('skorTxt').textContent=skor;
+$('btnSkip').style.display='none';
+$('btnNext').classList.add('show');
+}
+function autoSkip(){
+if(locked)return;
+var s=soal[idx],btns=kunci();
+btns[s.benar].classList.add('benar');
+var fb=$('qFb');
+fb.className='fb show skip';
+fb.innerHTML='⏱ <b>Waktu habis!</b> Dilewati otomatis (0 poin). Jawaban benar: <b>'+['A','B','C','D'][s.benar]+'</b>'+(s.penjelasan?'<br>💡 '+s.penjelasan:'');
+$('btnSkip').style.display='none';
+$('btnNext').classList.add('show');
+}
+$('btnSkip').onclick=function(){
+if(locked)return;
+var s=soal[idx],btns=kunci();
+var fb=$('qFb');
+fb.className='fb show skip';
+fb.innerHTML='⏭ <b>Dilewati</b> (0 poin). Jawaban benar: <b>'+['A','B','C','D'][s.benar]+'</b>'+(s.penjelasan?'<br>💡 '+s.penjelasan:'');
+$('btnSkip').style.display='none';
+$('btnNext').classList.add('show');
+};
+$('btnNext').onclick=function(){
+if(idx<soal.length-1){idx++;renderSoal();window.scrollTo({top:0,behavior:'smooth'});}
+else{finish();}
+};
+function predikat(){
+var maks=soal.length*POIN,pct=maks?skor/maks*100:0;
+if(pct>=85)return '🏆 Teknisi K3LH Muda';
+if(pct>=70)return '🥇 Wasit K3 Andal';
+if(pct>=50)return '🥈 Pengamat K3 Aktif';
+return '🥉 Pemula K3 — Ayo Latihan Lagi';
+}
+function finish(){
+stopTick();
+$('progBar').style.width='100%';
+$('play').style.display='none';
+var s=getSiswa()||{nama:$('idNama').textContent,kelas:$('idKelas').textContent,area:area};
+var tgl=new Date().toLocaleDateString('id-ID',{day:'numeric',month:'long',year:'numeric'});
+$('hArea').textContent=AREA_LABEL[area];
+$('hNama').textContent=(s.nama||'-')+' · '+(s.kelas||'-');
+$('hTgl').textContent=tgl+' · '+AREA_LABEL[area];
+$('hSkor').textContent=skor;
+$('hMax').textContent='dari '+(soal.length*POIN)+' · '+benar+'/'+soal.length+' benar';
+$('hPred').textContent=predikat();
+$('hasil').classList.add('show');
+window.scrollTo({top:0,behavior:'smooth'});
+}
+$('btnUlangi').onclick=function(){startQuiz();window.scrollTo({top:0,behavior:'smooth'});};
+$('btnArea').onclick=function(){$('play').style.display='block';$('hasil').classList.remove('show');document.getElementById('areaBar').scrollIntoView({behavior:'smooth'});};
+$('btnSimpan').onclick=function(){
+if(typeof html2canvas==='undefined'){alert('⚠️ html2canvas belum termuat (butuh internet CDN). Cek koneksi lalu coba lagi.');return;}
+var s=getSiswa()||{};
+html2canvas($('hasilCard'),{scale:2,useCORS:true}).then(function(canvas){
+var a=document.createElement('a');
+var nm=String(s.nama||'siswa').replace(/[^\w\- ]+/g,'').trim().replace(/\s+/g,'-')||'siswa';
+a.download='hasil-tebak-bahaya-'+area+'-'+nm+'.png';
+a.href=canvas.toDataURL('image/png');
+document.body.appendChild(a);a.click();a.remove();
+}).catch(function(){alert('⚠️ Gagal membuat PNG. Coba lagi.');});
+};
+document.querySelectorAll('#areaBar button').forEach(function(b){
+b.onclick=function(){
+var a=b.dataset.area,s=getSiswa()||{};
+s.area=a;
+try{sessionStorage.setItem('kyt_siswa',JSON.stringify({nama:s.nama||'',kelas:s.kelas||'',area:a}));}catch(e){}
+setArea(a);loadSoal(a);
+};
+});
+/* mini gate bila sessionStorage kosong */
+document.querySelectorAll('#mPick button').forEach(function(b){
+b.onclick=function(){document.querySelectorAll('#mPick button').forEach(function(x){x.classList.remove('on');});b.classList.add('on');mPick=b.dataset.area;$('mErr').classList.remove('show');};
+});
+$('mGo').onclick=function(){
+var n=$('mNama').value.trim(),k=$('mKelas').value.trim();
+if(!n){$('mErr').textContent='⚠️ Nama wajib diisi.';$('mErr').classList.add('show');return;}
+if(!k){$('mErr').textContent='⚠️ Kelas wajib diisi.';$('mErr').classList.add('show');return;}
+if(!mPick){$('mErr').textContent='⚠️ Pilih salah satu area kerja.';$('mErr').classList.add('show');return;}
+try{sessionStorage.setItem('kyt_siswa',JSON.stringify({nama:n,kelas:k,area:mPick}));}catch(e){}
+boot(mPick);
+};
+function loadSoal(a){
+fetch('quiz.json').then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(d){
+var q=extractSoal(d,a);
+if(q.length<N_SOAL&&a==='bengkel'){
+/* bengkel: campur semua area bila bank bengkel kurang */
+var all=[];Object.keys(d).forEach(function(k){all=all.concat(extractSoal(d,k));});
+q=q.concat(all);
+}
+q=shuffle(q).slice(0,N_SOAL);
+soal=q.length?normalize(q):fallbackSoal(a);
+startQuiz();
+}).catch(function(){soal=fallbackSoal(a);startQuiz();});
+}
+function normalize(q){
+return q.map(function(s){
+var op=s.opsi.slice(0,4);
+while(op.length<4)op.push('—');
+var lv=String(s.level||'Sedang');
+lv=lv.charAt(0).toUpperCase()+lv.slice(1).toLowerCase();
+if(lv!=='Tinggi'&&lv!=='Sedang'&&lv!=='Rendah')lv='Sedang';
+return {tanya:s.tanya,opsi:op,benar:Math.min(Math.max(0,s.benar|0),op.length-1),level:lv,penjelasan:s.penjelasan||''};
+});
+}
+function boot(a){
+setArea(a||qsArea()||'lab');
+var s=getSiswa();
+if(!s||!s.nama||!s.kelas){
+$('miniGate').classList.add('show');
+$('play').style.display='none';
+mPick=area;
+document.querySelectorAll('#mPick button').forEach(function(b){b.classList.toggle('on',b.dataset.area===area);});
+return;
+}
+$('miniGate').classList.remove('show');
+$('idNama').textContent=s.nama;
+$('idKelas').textContent=s.kelas;
+$('idArea').textContent=AREA_LABEL[s.area]||s.area;
+if(s.area&&s.area!==area)setArea(s.area);
+loadSoal(area);
+}
+boot(qsArea());
+})();
+</script>
+</body>
+</html>

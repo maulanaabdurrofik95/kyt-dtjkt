@@ -1,0 +1,988 @@
+{
+ "area": [
+  {
+   "id": "lab",
+   "nama": "Lab Komputer & Jaringan",
+   "soal": [
+    {
+     "tanya": "Stop kontak di lab menumpuk 6 colokan dan terasa panas. Tindakan paling tepat? ",
+     "opsi": [
+      "Cabut sebagian beban dan bagi ke MCB/jalur terpisah sesuai daya",
+      "Tambah colokan cabang agar muat semua",
+      "Siram air agar stop kontak dingin",
+      "Tutup dengan kardus supaya tidak tersentuh"
+     ],
+     "benar": 0,
+     "level": "tinggi",
+     "penjelasan": "Stop kontak panas tanda overload yang bisa memicu kebakaran; kurangi beban dan bagi ke jalur/MCB terpisah."
+    },
+    {
+     "tanya": "Kabel power dan LAN berserakan melintang di lorong lab. Apa yang harus dilakukan?",
+     "opsi": [
+      "Tutupi dengan karpet agar tidak terlihat",
+      "Rapikan dengan cable tray/duct, beri label, dan amankan dari injakan",
+      "Gulung semua jadi satu bundel besar tanpa label",
+      "Biarkan saja karena semua orang sudah hafal posisinya"
+     ],
+     "benar": 1,
+     "level": "sedang",
+     "penjelasan": "Kabel berserakan berisiko tersandung dan korsleting; rapikan dengan tray/duct dan beri label."
+    },
+    {
+     "tanya": "Posisi monitor yang ergonomis untuk praktikum lama adalah?",
+     "opsi": [
+      "Layar sedekat mungkin dengan wajah",
+      "Monitor miring 90 derajat ke samping",
+      "Tepi atas layar sejajar/setinggi mata, jarak sekitar satu lengan",
+      "Monitor menengadah dari bawah meja"
+     ],
+     "benar": 2,
+     "level": "rendah",
+     "penjelasan": "Monitor sejajar mata dan sejarak lengan mencegah nyeri leher dan mata lelah."
+    },
+    {
+     "tanya": "Kursi lab yang rodanya rusak sebaiknya?",
+     "opsi": [
+      "Dipakai bergantian supaya adil",
+      "Diganjal dengan buku di bawahnya",
+      "Tetap dipakai asal hati-hati",
+      "Diperbaiki/diganti dan jangan dipakai sebelum aman"
+     ],
+     "benar": 3,
+     "level": "sedang",
+     "penjelasan": "Kursi rusak berisiko membuat siswa jatuh; tarik dari pemakaian sampai diperbaiki."
+    },
+    {
+     "tanya": "Jenis APAR yang tepat untuk kebakaran listrik (panel/MCB/PC)?",
+     "opsi": [
+      "APAR CO2 atau powder (ABC) yang sesuai untuk listrik",
+      "Disiram air dari ember",
+      "APAR air (water)",
+      "APAR busa (foam) saja"
+     ],
+     "benar": 0,
+     "level": "tinggi",
+     "penjelasan": "Kebakaran listrik tidak boleh disiram air; gunakan APAR CO2/powder sesuai kelas api listrik."
+    },
+    {
+     "tanya": "Sebelum membuka casing PC/server yang terhubung listrik, langkah pertama?",
+     "opsi": [
+      "Langsung buka karena tegangannya kecil",
+      "Matikan daya, cabut kabel power, dan pastikan tidak bertegangan",
+      "Buka sambil colokan tetap menancap agar cepat",
+      "Basahi tangan agar tidak ada statis"
+     ],
+     "benar": 1,
+     "level": "sedang",
+     "penjelasan": "Mematikan dan mencabut daya mencegah sengatan listrik saat menyentuh komponen."
+    },
+    {
+     "tanya": "Fungsi grounding/arde pada instalasi listrik lab?",
+     "opsi": [
+      "Mengurangi tagihan listrik",
+      "Hiasan instalasi agar terlihat rapi",
+      "Menyalurkan arus bocor ke tanah sehingga mencegah sengatan",
+      "Menambah kecepatan internet"
+     ],
+     "benar": 2,
+     "level": "sedang",
+     "penjelasan": "Grounding membuang arus bocor ke tanah dan mencegah kesetrum saat menyentuh bodi alat."
+    },
+    {
+     "tanya": "Gelang antistatis (ESD wrist strap) dipakai saat?",
+     "opsi": [
+      "Mengangkat monitor yang berat",
+      "Mengepel lantai lab",
+      "Mengisi tinta printer",
+      "Memasang/melepas RAM dan komponen sensitif PC"
+     ],
+     "benar": 3,
+     "level": "rendah",
+     "penjelasan": "Komponen elektronik sensitif terhadap listrik statis tubuh; gelang ESD melindungi komponen."
+    },
+    {
+     "tanya": "Aturan 20-20-20 untuk kesehatan mata saat praktikum komputer?",
+     "opsi": [
+      "Setiap 20 menit, alihkan pandangan 20 kaki (~6 m) selama 20 detik",
+      "Menatap layar 20 jam tanpa henti",
+      "Menutup mata 20 menit tiap jam",
+      "Mengganti monitor tiap 20 hari"
+     ],
+     "benar": 0,
+     "level": "rendah",
+     "penjelasan": "Istirahat mata berkala mencegah kelelahan dan iritasi mata."
+    },
+    {
+     "tanya": "Minuman diletakkan di samping keyboard PC lab. Risikonya dan solusinya?",
+     "opsi": [
+      "Aman, tidak ada risiko",
+      "Risiko tumpah merusak PC dan korsleting; jauhkan minuman dari perangkat",
+      "Boleh asal gelasnya besar",
+      "Biarkan karena tanggung jawab teknisi"
+     ],
+     "benar": 1,
+     "level": "rendah",
+     "penjelasan": "Cairan yang tumpah ke perangkat berisiko korsleting; tempatkan minuman jauh dari PC."
+    },
+    {
+     "tanya": "MCB (Miniature Circuit Breaker) di panel lab berfungsi untuk?",
+     "opsi": [
+      "Menghubungkan internet ke tiap meja",
+      "Mengatur kecerahan lampu",
+      "Memutus arus otomatis saat beban lebih/hubung singkat",
+      "Menambah daya listrik otomatis"
+     ],
+     "benar": 2,
+     "level": "sedang",
+     "penjelasan": "MCB melindungi instalasi dari overload dan korsleting dengan memutus arus otomatis."
+    },
+    {
+     "tanya": "Ruang server/rak jaringan terasa sangat panas. Tindakan tepat?",
+     "opsi": [
+      "Tutup semua ventilasi agar tidak berdebu",
+      "Semprot air ke dalam rak",
+      "Matikan AC agar hemat listrik",
+      "Pastikan ventilasi/AC berjalan, cek suhu, jangan tutup lubang udara rak"
+     ],
+     "benar": 3,
+     "level": "sedang",
+     "penjelasan": "Panas berlebih merusak perangkat dan memicu api; jaga sirkulasi udara dan suhu ruangan."
+    },
+    {
+     "tanya": "Teman tersengat listrik (masih menempel pada sumber). Pertolongan pertama?",
+     "opsi": [
+      "Matikan sumber listrik dulu, lalu bebaskan korban dengan benda isolator kering",
+      "Siram korban dengan air",
+      "Tunggu sampai dia lepas sendiri",
+      "Langsung tarik tubuhnya dengan tangan kosong"
+     ],
+     "benar": 0,
+     "level": "tinggi",
+     "penjelasan": "Memutus sumber listrik lebih dulu melindungi penolong dari ikut tersengat."
+    },
+    {
+     "tanya": "Pencahayaan ideal meja praktikum lab komputer?",
+     "opsi": [
+      "Gelap total agar layar terlihat jelas",
+      "Cukup terang merata tanpa silau di layar",
+      "Remang-remang dengan lampu warna-warni",
+      "Hanya mengandalkan cahaya layar"
+     ],
+     "benar": 1,
+     "level": "rendah",
+     "penjelasan": "Cahaya merata tanpa silau mencegah mata lelah dan kesalahan kerja."
+    },
+    {
+     "tanya": "Setiap kabel UTP hasil crimping sebaiknya?",
+     "opsi": [
+      "Digulung kencang sampai tertekuk",
+      "Dibiarkan tanpa label agar cepat",
+      "Diberi label dan diuji dengan LAN tester sebelum dipakai",
+      "Langsung dipasang tanpa diuji"
+     ],
+     "benar": 2,
+     "level": "sedang",
+     "penjelasan": "Label memudahkan pelacakan dan LAN tester memastikan crimping benar sebelum instalasi."
+    },
+    {
+     "tanya": "Postur duduk yang benar saat praktikum lama di depan PC?",
+     "opsi": [
+      "Membungkuk dekat ke layar",
+      "Duduk di ujung kursi tanpa sandaran",
+      "Kaki terlipat di atas kursi seharian",
+      "Punggung tegak bersandar, kaki menapak lantai, bahu rileks"
+     ],
+     "benar": 3,
+     "level": "rendah",
+     "penjelasan": "Postur netral mencegah nyeri punggung, leher, dan kelelahan otot."
+    },
+    {
+     "tanya": "UPS di lab berguna untuk?",
+     "opsi": [
+      "Memberi daya cadangan sementara agar PC bisa dimatikan aman saat mati lampu",
+      "Menghubungkan WiFi",
+      "Menambah kecepatan prosesor",
+      "Mendinginkan ruangan"
+     ],
+     "benar": 0,
+     "level": "sedang",
+     "penjelasan": "UPS memberi waktu menyimpan pekerjaan dan mematikan perangkat dengan aman."
+    },
+    {
+     "tanya": "Kabel LAN ditarik melewati area tajam/pintu terjepit. Tindakan tepat?",
+     "opsi": [
+      "Biarkan terjepit karena lebih rapi",
+      "Lindungi dengan pelindung/duct dan ubah jalur agar kabel tidak rusak",
+      "Tarik sekuat tenaga sampai lewat",
+      "Potong dan sambung seadanya tanpa isolasi"
+     ],
+     "benar": 1,
+     "level": "sedang",
+     "penjelasan": "Kabel terjepit bisa putus dan korsleting; lindungi dan ubah jalur."
+    },
+    {
+     "tanya": "APAR di lab idealnya diletakkan?",
+     "opsi": [
+      "Di belakang tumpukan barang",
+      "Terkunci di gudang yang jauh",
+      "Dekat pintu/jalur evakuasi, mudah terlihat dan terjangkau",
+      "Di atas lemari yang tinggi"
+     ],
+     "benar": 2,
+     "level": "sedang",
+     "penjelasan": "APAR harus mudah dijangkau saat darurat, dekat pintu dan terlihat jelas."
+    },
+    {
+     "tanya": "Tanda instalasi listrik lab bermasalah dan harus dilaporkan?",
+     "opsi": [
+      "Lampu menyala normal",
+      "Kipas berputar seperti biasa",
+      "Tidak ada suara apa pun",
+      "Bau gosong, bunyi mendesis, atau MCB sering turun"
+     ],
+     "benar": 3,
+     "level": "tinggi",
+     "penjelasan": "Bau gosong dan MCB sering turun adalah gejala gangguan listrik serius; segera laporkan."
+    }
+   ]
+  },
+  {
+   "id": "tower",
+   "nama": "Tower & Ketinggian",
+   "soal": [
+    {
+     "tanya": "Alat pelindung utama saat memanjat tower adalah?",
+     "opsi": [
+      "Full body harness yang terpasang dan terkunci benar",
+      "Ikatan tali rafia di pinggang",
+      "Cukup berpegangan kuat",
+      "Topi biasa dan sandal"
+     ],
+     "benar": 0,
+     "level": "tinggi",
+     "penjelasan": "Full body harness menahan tubuh aman saat bekerja di ketinggian."
+    },
+    {
+     "tanya": "Prinsip 100% tie-off saat memanjat berarti?",
+     "opsi": [
+      "Tidak perlu tali bila sudah berpengalaman",
+      "Selalu terkait minimal satu pengait ke titik angkur",
+      "Melepas semua pengait agar bebas bergerak",
+      "Mengaitkan tali ke teman"
+     ],
+     "benar": 1,
+     "level": "tinggi",
+     "penjelasan": "Selalu ada pengait terkait sehingga tidak ada momen tanpa perlindungan jatuh."
+    },
+    {
+     "tanya": "Helm kerja ketinggian yang benar?",
+     "opsi": [
+      "Tidak pakai helm agar ringan",
+      "Helm dipegang tangan",
+      "Helm dengan tali dagu (chin strap) terpasang",
+      "Topi proyek tanpa tali"
+     ],
+     "benar": 2,
+     "level": "sedang",
+     "penjelasan": "Tali dagu mencegah helm lepas saat menengadah atau tertiup angin."
+    },
+    {
+     "tanya": "Kondisi cuaca yang MEMAKSA pekerjaan tower dihentikan?",
+     "opsi": [
+      "Mendung tipis tanpa angin",
+      "Pagi berkabut ringan",
+      "Cerah berawan ringan",
+      "Petir/menyambar, hujan deras, atau angin kencang"
+     ],
+     "benar": 3,
+     "level": "tinggi",
+     "penjelasan": "Petir dan angin kencang sangat berbahaya di ketinggian; hentikan dan turun."
+    },
+    {
+     "tanya": "Sebelum memanjat, kondisi tower yang wajib diperiksa?",
+     "opsi": [
+      "Karat parah, baut kendor, dan struktur rusak",
+      "Jumlah burung di sekitar",
+      "Merek tower",
+      "Warna cat tower"
+     ],
+     "benar": 0,
+     "level": "tinggi",
+     "penjelasan": "Struktur korosi atau baut kendor bisa runtuh saat dipanjat; inspeksi dulu."
+    },
+    {
+     "tanya": "Agar kunci/obeng tidak jatuh dari ketinggian?",
+     "opsi": [
+      "Dikantongi longgar di saku",
+      "Diikat dengan tool lanyard/tether ke harness",
+      "Dilempar ke bawah bila selesai",
+      "Dititipkan di puncak tower"
+     ],
+     "benar": 1,
+     "level": "sedang",
+     "penjelasan": "Perkakas jatuh dari ketinggian bisa fatal bagi orang di bawah; tether semua alat."
+    },
+    {
+     "tanya": "Area di bawah tower saat ada pekerjaan di atas harus?",
+     "opsi": [
+      "Dipakai parkir motor",
+      "Dibiarkan bebas untuk penonton",
+      "Dibatasi/barikade dan bebas orang tanpa tugas",
+      "Dijadikan tempat istirahat"
+     ],
+     "benar": 2,
+     "level": "sedang",
+     "penjelasan": "Barikade mencegah orang tertimpa perkakas atau material jatuh."
+    },
+    {
+     "tanya": "Aturan buddy system saat kerja tower?",
+     "opsi": [
+      "Naik ramai-ramai sekaligus",
+      "Tidak perlu komunikasi",
+      "Naik sendirian agar cepat",
+      "Minimal berdua: satu memanjat, satu mengawasi dari bawah dengan komunikasi"
+     ],
+     "benar": 3,
+     "level": "sedang",
+     "penjelasan": "Pengawas di bawah memantau keselamatan dan siap memanggil bantuan darurat."
+    },
+    {
+     "tanya": "Alat komunikasi yang wajib dibawa saat kerja tower?",
+     "opsi": [
+      "HT/radio atau HP agar terhubung dengan tim bawah",
+      "Tidak perlu, cukup teriak",
+      "Surat kabar",
+      "Peluit mainan saja"
+     ],
+     "benar": 0,
+     "level": "rendah",
+     "penjelasan": "Komunikasi memastikan koordinasi dan panggilan darurat cepat."
+    },
+    {
+     "tanya": "Pekerja merasa pusing/vertigo sebelum memanjat. Sikap tepat?",
+     "opsi": [
+      "Tetap naik agar tidak dimarahi",
+      "Melapor dan tidak memanjat sampai fit, digantikan yang sehat",
+      "Minum kopi lalu langsung naik",
+      "Naik pelan-pelan sendirian"
+     ],
+     "benar": 1,
+     "level": "tinggi",
+     "penjelasan": "Gangguan keseimbangan di ketinggian berisiko jatuh fatal; jangan memanjat saat tidak fit."
+    },
+    {
+     "tanya": "Sepatu yang tepat untuk memanjat tower?",
+     "opsi": [
+      "Tanpa alas kaki",
+      "Sandal jepit",
+      "Sepatu safety anti-selip bertali kuat",
+      "Sepatu hak tinggi"
+     ],
+     "benar": 2,
+     "level": "rendah",
+     "penjelasan": "Sol anti-selip dan tali kuat mencegah tergelincir saat memanjat."
+    },
+    {
+     "tanya": "Double lanyard (dua pengait) digunakan untuk?",
+     "opsi": [
+      "Menjemur pakaian",
+      "Mengikat barang belanjaan",
+      "Hiasan harness",
+      "Berpindah titik angkur tanpa pernah lepas keduanya sekaligus"
+     ],
+     "benar": 3,
+     "level": "tinggi",
+     "penjelasan": "Dua pengait memungkinkan pindah angkur dengan satu pengait selalu terkait."
+    },
+    {
+     "tanya": "Izin kerja (work permit) ketinggian diperlukan karena?",
+     "opsi": [
+      "Memastikan risiko dinilai, pengawas tahu, dan rescue plan siap",
+      "Agar bisa pulang cepat",
+      "Supaya dapat uang lembur",
+      "Formalitas belaka"
+     ],
+     "benar": 0,
+     "level": "sedang",
+     "penjelasan": "Izin kerja memastikan persiapan keselamatan dan kesiapan penyelamatan."
+    },
+    {
+     "tanya": "Rescue plan (rencana penyelamatan) wajib ada karena?",
+     "opsi": [
+      "Tidak penting",
+      "Korban tergantung harness harus dievakuasi cepat (suspension trauma)",
+      "Agar dokumen lengkap saja",
+      "Untuk latihan baris-berbaris"
+     ],
+     "benar": 1,
+     "level": "tinggi",
+     "penjelasan": "Tergantung terlalu lama di harness bisa fatal; evakuasi harus cepat."
+    },
+    {
+     "tanya": "Sarung tangan saat kerja tower berfungsi untuk?",
+     "opsi": [
+      "Menyembunyikan kuku",
+      "Gaya saja",
+      "Melindungi dari luka, sengatan gesekan tali, dan cengkeraman lebih baik",
+      "Menghangatkan saat tidur"
+     ],
+     "benar": 2,
+     "level": "rendah",
+     "penjelasan": "Sarung tangan mencegah luka dan memperbaiki grip pada struktur/tali."
+    },
+    {
+     "tanya": "Lampu beacon/penerangan pada tower berfungsi untuk?",
+     "opsi": [
+      "Menerangi jalan warga",
+      "Menakuti burung",
+      "Hiasan malam hari",
+      "Menandai keberadaan tower bagi penerbangan dan visibilitas"
+     ],
+     "benar": 3,
+     "level": "sedang",
+     "penjelasan": "Penanda visual mencegah tabrakan dan menunjukkan ada struktur tinggi."
+    },
+    {
+     "tanya": "Grounding/penangkal petir pada tower penting karena?",
+     "opsi": [
+      "Tower tinggi mudah tersambar petir; grounding menyalurkan arusnya",
+      "Agar tower tidak panas",
+      "Supaya cat awet",
+      "Menambah sinyal"
+     ],
+     "benar": 0,
+     "level": "tinggi",
+     "penjelasan": "Tower adalah titik tinggi penangkap petir; grounding melindungi pekerja dan perangkat."
+    },
+    {
+     "tanya": "Beban maksimal peralatan yang dibawa ke atas harus?",
+     "opsi": [
+      "Sebanyak-banyaknya sekaligus",
+      "Dibatasi sesuai kapasitas dan dibawa bertahap dengan tali angkat",
+      "Tidak dibatasi",
+      "Digantung semua di leher"
+     ],
+     "benar": 1,
+     "level": "sedang",
+     "penjelasan": "Beban berlebih mengganggu keseimbangan; angkat bertahap dengan haul line."
+    },
+    {
+     "tanya": "Tangga vertikal tower yang licin/beroli harus?",
+     "opsi": [
+      "Dilumuri oli lagi",
+      "Dinaiki cepat-cepat",
+      "Dibersihkan dan dilaporkan; jangan dipanjat sebelum aman",
+      "Dibiarkan saja"
+     ],
+     "benar": 2,
+     "level": "sedang",
+     "penjelasan": "Permukaan licin memicu tergelincir; amankan dulu sebelum memanjat."
+    },
+    {
+     "tanya": "Setelah pekerjaan tower selesai, langkah penutup K3?",
+     "opsi": [
+      "Biarkan alat di atas",
+      "Buka akses untuk umum",
+      "Langsung pulang",
+      "Periksa tidak ada alat tertinggal, kunci akses naik, catat laporan kerja"
+     ],
+     "benar": 3,
+     "level": "rendah",
+     "penjelasan": "Memastikan tidak ada bahaya sisa dan akses aman dikunci kembali."
+    }
+   ]
+  },
+  {
+   "id": "fiber",
+   "nama": "Fiber Optik & Splicing",
+   "soal": [
+    {
+     "tanya": "Cahaya laser dari VFL/OTDR pada jaringan fiber?",
+     "opsi": [
+      "Jangan dilihat langsung; bisa merusak mata permanen",
+      "Boleh dilihat asal sebentar",
+      "Hanya berbahaya bagi kacamata",
+      "Aman dilihat langsung karena kecil"
+     ],
+     "benar": 0,
+     "level": "tinggi",
+     "penjelasan": "Laser fiber tak selalu terlihat tapi merusak retina; jangan menatap ujung serat aktif."
+    },
+    {
+     "tanya": "APD mata yang tepat saat splicing fiber?",
+     "opsi": [
+      "Tidak perlu pelindung",
+      "Kacamata safety untuk menahan serpihan serat",
+      "Kacamata hitam biasa",
+      "Menutup mata dengan tangan"
+     ],
+     "benar": 1,
+     "level": "sedang",
+     "penjelasan": "Serpihan fiber bisa melukai mata; kacamata safety wajib."
+    },
+    {
+     "tanya": "Serpihan potongan fiber optik harus?",
+     "opsi": [
+      "Ditiup ke udara",
+      "Dibuang sembarangan ke lantai",
+      "Dikumpulkan di wadah khusus (sharps container) dan tidak disentuh tangan kosong",
+      "Disimpan di saku"
+     ],
+     "benar": 2,
+     "level": "tinggi",
+     "penjelasan": "Serpihan fiber menusuk kulit dan berbahaya bila terhirup/tertelan; kelola sebagai limbah tajam."
+    },
+    {
+     "tanya": "Splicer (fusion splicer) menggunakan?",
+     "opsi": [
+      "Lem kertas",
+      "Air panas",
+      "Api unggun",
+      "Loncatan listrik tegangan tinggi untuk meleburkan serat"
+     ],
+     "benar": 3,
+     "level": "sedang",
+     "penjelasan": "Elektroda splicer bertegangan tinggi; jangan sentuh area elektroda dan ikuti SOP."
+    },
+    {
+     "tanya": "Alkohol isopropil untuk membersihkan serat bersifat?",
+     "opsi": [
+      "Mudah terbakar; jauhkan dari api dan simpan tertutup",
+      "Bisa dibuang ke sembarang tempat",
+      "Aman disemprot ke splicer menyala",
+      "Air biasa yang aman diminum"
+     ],
+     "benar": 0,
+     "level": "sedang",
+     "penjelasan": "Alkohol mudah terbakar; jauhkan dari sumber api dan pastikan ventilasi."
+    },
+    {
+     "tanya": "Saat membersihkan serat dengan alkohol, ventilasi ruangan harus?",
+     "opsi": [
+      "Ditutup rapat",
+      "Baik/terbuka agar uap tidak menumpuk",
+      "Tidak penting",
+      "Diganti asap rokok"
+     ],
+     "benar": 1,
+     "level": "rendah",
+     "penjelasan": "Uap alkohol mengiritasi pernapasan; ruangan perlu sirkulasi udara baik."
+    },
+    {
+     "tanya": "Serpihan fiber menusuk kulit. Tindakan tepat?",
+     "opsi": [
+      "Dijilat lukanya",
+      "Digosok agar masuk lebih dalam",
+      "Jangan digosok; keluarkan hati-hati dengan pinset, bersihkan, cari bantuan medis bila perlu",
+      "Dibiarkan saja"
+     ],
+     "benar": 2,
+     "level": "sedang",
+     "penjelasan": "Menggosok memperparah; keluarkan dengan pinset steril dan jaga kebersihan luka."
+    },
+    {
+     "tanya": "Percikan alkohol/isopropil masuk ke mata. Pertolongan pertama?",
+     "opsi": [
+      "Teteskan lem",
+      "Biarkan kering sendiri",
+      "Kucek mata kuat-kuat",
+      "Bilas dengan air mengalir beberapa menit dan cari bantuan medis"
+     ],
+     "benar": 3,
+     "level": "tinggi",
+     "penjelasan": "Bilas segera mengencerkan bahan kimia; kucekan memperparah iritasi."
+    },
+    {
+     "tanya": "Makan dan minum di meja splicing?",
+     "opsi": [
+      "Dilarang; cegah kontaminasi serpihan fiber dan bahan kimia",
+      "Wajib sambil bekerja",
+      "Boleh asal berbagi",
+      "Boleh, asal cepat"
+     ],
+     "benar": 0,
+     "level": "rendah",
+     "penjelasan": "Makanan bisa terkontaminasi serpihan fiber dan alkohol; pisahkan area makan."
+    },
+    {
+     "tanya": "Label kelas laser pada perangkat optik berfungsi untuk?",
+     "opsi": [
+      "Hiasan pabrik",
+      "Memberi tahu tingkat bahaya laser dan cara aman menanganinya",
+      "Menambah harga jual",
+      "Menunjukkan warna favorit"
+     ],
+     "benar": 1,
+     "level": "sedang",
+     "penjelasan": "Label kelas laser menginformasikan risiko dan kontrol yang dibutuhkan."
+    },
+    {
+     "tanya": "Cleaver (pemotong presisi serat) memiliki pisau sangat tajam. Aturan aman?",
+     "opsi": [
+      "Disimpan terbuka di tepi meja",
+      "Dimainkan seperti mainan",
+      "Gunakan sesuai SOP, tutup/kunci setelah pakai, jauhkan jari dari mata pisau",
+      "Dipinjamkan tanpa penjelasan"
+     ],
+     "benar": 2,
+     "level": "sedang",
+     "penjelasan": "Pisau cleaver melukai parah; operasikan hati-hati dan amankan setelah dipakai."
+    },
+    {
+     "tanya": "Radius tekuk (bend radius) kabel fiber harus dijaga karena?",
+     "opsi": [
+      "Semakin tajam semakin bagus",
+      "Tidak ada pengaruhnya",
+      "Agar kabel terlihat seni",
+      "Tekukan tajam merusak serat dan menaikkan redaman/rugi daya"
+     ],
+     "benar": 3,
+     "level": "sedang",
+     "penjelasan": "Tekukan melebihi batas mematahkan serat dan menurunkan kualitas sinyal."
+    },
+    {
+     "tanya": "Baterai/adaptor splicer yang panas atau menggelembung harus?",
+     "opsi": [
+      "Hentikan pakai, cabut daya, dan laporkan; jangan dibongkar sendiri",
+      "Ditusuk agar kempis",
+      "Disimpan di saku celana",
+      "Terus dipakai sampai meledak"
+     ],
+     "benar": 0,
+     "level": "tinggi",
+     "penjelasan": "Baterai rusak berisiko kebakaran/ledakan; hentikan dan laporkan."
+    },
+    {
+     "tanya": "Sarung tangan saat menangani serat dan bahan kimia berguna untuk?",
+     "opsi": [
+      "Agar tangan terlihat bersih",
+      "Melindungi dari tusukan serpihan dan iritasi bahan kimia",
+      "Supaya tidak perlu cuci tangan selamanya",
+      "Tidak ada gunanya"
+     ],
+     "benar": 1,
+     "level": "rendah",
+     "penjelasan": "Sarung tangan mengurangi risiko tusukan fiber dan kontak kimia."
+    },
+    {
+     "tanya": "Masker saat membersihkan area splicing berdebu/berserpihan?",
+     "opsi": [
+      "Hanya untuk gaya",
+      "Tidak perlu",
+      "Dianjurkan agar serpihan halus tidak terhirup",
+      "Mengganggu pernapasan jadi dilarang"
+     ],
+     "benar": 2,
+     "level": "rendah",
+     "penjelasan": "Serpihan halus fiber berbahaya bila terhirup; masker melindungi pernapasan."
+    },
+    {
+     "tanya": "Limbah fiber dan tisu beralkohol dibuang ke?",
+     "opsi": [
+      "Selokan",
+      "Dibakar di ruangan",
+      "Tempat sampah umum terbuka",
+      "Wadah khusus tertutup sesuai aturan limbah; tidak dibakar sembarangan"
+     ],
+     "benar": 3,
+     "level": "sedang",
+     "penjelasan": "Limbah tajam dan mudah terbakar perlu wadah khusus dan penanganan benar."
+    },
+    {
+     "tanya": "Sebelum menyalakan VFL (visual fault locator), pastikan?",
+     "opsi": [
+      "Ujung serat tidak mengarah ke mata siapa pun",
+      "Ruangan gelap total tanpa pemberitahuan",
+      "Tidak perlu memeriksa apa pun",
+      "Ujung serat mengarah ke mata sendiri"
+     ],
+     "benar": 0,
+     "level": "tinggi",
+     "penjelasan": "Laser VFL kuat; pastikan tidak ada mata yang terpapar sebelum menyalakan."
+    },
+    {
+     "tanya": "Penerangan meja splicing yang baik?",
+     "opsi": [
+      "Gelap agar laser terlihat",
+      "Terang merata agar serat dan alat terlihat jelas",
+      "Berkedip-kedip",
+      "Hanya senter HP"
+     ],
+     "benar": 1,
+     "level": "rendah",
+     "penjelasan": "Cahaya cukup mencegah kesalahan dan kecelakaan kerja presisi."
+    },
+    {
+     "tanya": "Kabel fiber aktif yang ujungnya terbuka sebaiknya?",
+     "opsi": [
+      "Dijilat ujungnya",
+      "Dibiarkan terbuka dan diarahkan ke orang",
+      "Ditutup dengan dust cap dan diberi tanda",
+      "Dipotong langsung"
+     ],
+     "benar": 2,
+     "level": "sedang",
+     "penjelasan": "Tutup ujung mencegah kontaminasi dan paparan cahaya; beri tanda kabel aktif."
+    },
+    {
+     "tanya": "SOP sebelum mulai kerja splicing mencakup?",
+     "opsi": [
+      "Cabut semua label bahaya",
+      "Matikan semua lampu",
+      "Langsung kerja tanpa cek",
+      "Cek APD, alat, ventilasi, dan pahami prosedur darurat"
+     ],
+     "benar": 3,
+     "level": "rendah",
+     "penjelasan": "Persiapan APD dan prosedur darurat mencegah kecelakaan yang bisa dihindari."
+    }
+   ]
+  },
+  {
+   "id": "bengkel",
+   "nama": "Bengkel & Perkakas",
+   "soal": [
+    {
+     "tanya": "APD minimal masuk area bengkel (gerinda/las) adalah?",
+     "opsi": [
+      "Helm/penutup kepala bila perlu, kacamata safety, sarung tangan, sepatu safety",
+      "Topi pantai",
+      "Tanpa APD agar gerak bebas",
+      "Sandal dan kaos oblong"
+     ],
+     "benar": 0,
+     "level": "sedang",
+     "penjelasan": "APD dasar melindungi dari percikan, luka, dan benda jatuh di bengkel."
+    },
+    {
+     "tanya": "Pelindung (guard) pada gerinda tangan?",
+     "opsi": [
+      "Boleh dilepas agar lebih ringan",
+      "Wajib terpasang; jangan dipakai bila guard rusak/hilang",
+      "Dilepas bila diawasi teman",
+      "Tidak penting"
+     ],
+     "benar": 1,
+     "level": "tinggi",
+     "penjelasan": "Guard menahan pecahan batu gerinda; melepasnya sangat berbahaya."
+    },
+    {
+     "tanya": "APD khusus saat pengelasan (las listrik)?",
+     "opsi": [
+      "Topi biasa",
+      "Kacamata hitam biasa",
+      "Helm las/kedok dengan filter, sarung tangan las, apron kulit",
+      "Masker kain saja"
+     ],
+     "benar": 2,
+     "level": "tinggi",
+     "penjelasan": "Cahaya las merusak mata dan percikan membakar; gunakan pelindung las lengkap."
+    },
+    {
+     "tanya": "Asap las berbahaya bagi pernapasan. Pencegahannya?",
+     "opsi": [
+      "Mengelas di ruang tertutup rapat",
+      "Mengipas asap ke wajah teman",
+      "Tahan napas selama mengelas",
+      "Ventilasi baik/penghisap asap dan APD pernapasan bila needed"
+     ],
+     "benar": 3,
+     "level": "sedang",
+     "penjelasan": "Asap las mengandung gas/partikel beracun; pastikan sirkulasi dan ekstraksi asap."
+    },
+    {
+     "tanya": "Tumpahan oli di lantai bengkel harus?",
+     "opsi": [
+      "Segera dibersihkan dengan absorbent dan diberi tanda licin",
+      "Ditutup kardus selamanya",
+      "Disiram air agar menyebar",
+      "Dibiarkan sampai kering sendiri"
+     ],
+     "benar": 0,
+     "level": "sedang",
+     "penjelasan": "Oli licin memicu terpeleset dan mudah terbakar; bersihkan dan tandai."
+    },
+    {
+     "tanya": "Izin kerja panas (hot work permit) untuk las/gerinda diperlukan agar?",
+     "opsi": [
+      "Mempersulit pekerjaan",
+      "Memastikan area bebas bahan mudah terbakar dan pengawas siap",
+      "Menambah biaya",
+      "Formalitas tanpa guna"
+     ],
+     "benar": 1,
+     "level": "sedang",
+     "penjelasan": "Izin memastikan pemeriksaan api, APAR siaga, dan pengawasan."
+    },
+    {
+     "tanya": "Cara mengangkat beban berat (aki, tabung) yang aman?",
+     "opsi": [
+      "Lempar ke bahu sekaligus",
+      "Membungkuk dan menghentak pinggang",
+      "Tekuk lutut, punggung lurus, beban dekat tubuh; minta bantuan bila berat",
+      "Angkat dengan gigi"
+     ],
+     "benar": 2,
+     "level": "rendah",
+     "penjelasan": "Teknik angkat benar mencegah cedera punggung serius."
+    },
+    {
+     "tanya": "Perkakas rusak (palu gagang retak, kunci aus) sebaiknya?",
+     "opsi": [
+      "Disembunyikan di laci",
+      "Dipinjamkan ke orang lain",
+      "Tetap dipakai sampai hancur",
+      "Ditarik dari pemakaian, diberi tanda rusak, diperbaiki/diganti"
+     ],
+     "benar": 3,
+     "level": "sedang",
+     "penjelasan": "Perkakas rusak bisa patah dan melukai; amankan dan ganti."
+    },
+    {
+     "tanya": "Rambut panjang/baju longgar di dekat mesin berputar (bor/gerinda)?",
+     "opsi": [
+      "Berbahaya bisa tersangkut; ikat rambut, rapikan pakaian, lepas aksesori",
+      "Justru membantu pendinginan",
+      "Tidak perlu diatur",
+      "Aman, tidak ada risiko"
+     ],
+     "benar": 0,
+     "level": "tinggi",
+     "penjelasan": "Pakaian/rambut tersangkut mesin berputar menyebabkan cedera berat."
+    },
+    {
+     "tanya": "Pelindung telinga (earplug/earmuff) dibutuhkan saat?",
+     "opsi": [
+      "Hanya saat hujan",
+      "Mesin berisik (kompresor, gerinda) beroperasi",
+      "Saat istirahat tidur",
+      "Tidak pernah"
+     ],
+     "benar": 1,
+     "level": "rendah",
+     "penjelasan": "Kebisingan tinggi merusak pendengaran; gunakan pelindung telinga."
+    },
+    {
+     "tanya": "Dongkrak kendaraan harus dipasang dengan?",
+     "opsi": [
+      "Sambil mesin menyala dan masuk gigi",
+      "Di tanah miring dan sendirian",
+      "Di permukaan rata-keras, ganjal roda, lalu topang dengan jack stand",
+      "Di atas balok kayu rapuh"
+     ],
+     "benar": 2,
+     "level": "tinggi",
+     "penjelasan": "Jack stand mencegah kendaraan ambruk menimpa pekerja di bawahnya."
+    },
+    {
+     "tanya": "Bahan mudah terbakar (bensin, thinner) di bengkel disimpan?",
+     "opsi": [
+      "Di botol minum terbuka",
+      "Di bawah mesin panas",
+      "Di dekat area las agar praktis",
+      "Di tempat khusus berventilasi, tertutup, jauh dari sumber api"
+     ],
+     "benar": 3,
+     "level": "tinggi",
+     "penjelasan": "Uapnya mudah meledak; simpan sesuai aturan bahan mudah terbakar."
+    },
+    {
+     "tanya": "APAR di area bengkel las diletakkan?",
+     "opsi": [
+      "Siaga dekat area kerja tapi aman dari percikan, mudah dijangkau",
+      "Di luar gedung",
+      "Di bawah tumpukan ban",
+      "Di dalam lemari terkunci jauh"
+     ],
+     "benar": 0,
+     "level": "sedang",
+     "penjelasan": "APAR siaga dekat titik api mempercepat respons kebakaran."
+    },
+    {
+     "tanya": "Luka sayat/terkena gerinda di bengkel. Pertolongan pertama?",
+     "opsi": [
+      "Dibiarkan berdarah",
+      "Hentikan perdarahan dengan tekan kain bersih, bersihkan, tutup luka, cari bantuan medis",
+      "Ditempel oli",
+      "Disiram bensin"
+     ],
+     "benar": 1,
+     "level": "sedang",
+     "penjelasan": "Tekanan dan luka bersih mencegah infeksi; luka serius butuh tenaga medis."
+    },
+    {
+     "tanya": "Kabel las/gerinda yang terkelupas harus?",
+     "opsi": [
+      "Dibiarkan terinjak",
+      "Dilakban seadanya dan terus dipakai",
+      "Dihentikan pakai, diperbaiki/diganti teknisi; jangan dipakai",
+      "Disambung dengan tangan basah"
+     ],
+     "benar": 2,
+     "level": "tinggi",
+     "penjelasan": "Kabel terkelupas berisiko sengatan dan kebakaran; hentikan pemakaian."
+    },
+    {
+     "tanya": "Sarung tangan yang tepat untuk gerinda vs las?",
+     "opsi": [
+      "Las cukup tangan kosong",
+      "Gerinda pakai sarung tangan longgar tebal berlebih",
+      "Sama saja semua sarung tangan",
+      "Gerinda: sarung tangan pas anti-getar; las: sarung tangan kulit tahan panas"
+     ],
+     "benar": 3,
+     "level": "sedang",
+     "penjelasan": "Jenis bahaya beda: gerinda butuh grip pas, las butuh tahan panas/percikan."
+    },
+    {
+     "tanya": "Penerangan area kerja bengkel harus?",
+     "opsi": [
+      "Terang merata agar area potong/putar terlihat jelas",
+      "Silau langsung ke mata",
+      "Hanya lampu HP",
+      "Gelap agar hemat"
+     ],
+     "benar": 0,
+     "level": "rendah",
+     "penjelasan": "Cahaya cukup mencegah kesalahan potong dan kecelakaan mesin."
+    },
+    {
+     "tanya": "Kompresor angin perlu diperiksa?",
+     "opsi": [
+      "Tidak pernah",
+      "Rutin: tekanan, katup pengaman, selang, dan kuras air kondensat",
+      "Hanya saat meledak",
+      "Cukup dilihat dari jauh"
+     ],
+     "benar": 1,
+     "level": "sedang",
+     "penjelasan": "Tekanan berlebih/selang rusak bisa meledak; perawatan rutin wajib."
+    },
+    {
+     "tanya": "Selesai bekerja, kunci pas dan perkakas sebaiknya?",
+     "opsi": [
+      "Dibawa pulang semua",
+      "Dibiarkan berserakan di lantai",
+      "Dibersihkan dan dikembalikan ke kotak/raknya",
+      "Dilempar ke kolong mobil"
+     ],
+     "benar": 2,
+     "level": "rendah",
+     "penjelasan": "Housekeeping mencegah tersandung dan perkakas hilang/rusak."
+    },
+    {
+     "tanya": "Nomor darurat dan jalur evakuasi bengkel harus?",
+     "opsi": [
+      "Dihafal guru saja",
+      "Tidak perlu ada",
+      "Dirahasiakan",
+      "Diketahui semua siswa dan terpampang jelas"
+     ],
+     "benar": 3,
+     "level": "rendah",
+     "penjelasan": "Semua orang harus tahu cara melapor dan keluar saat darurat."
+    }
+   ]
+  }
+ ]
+}
