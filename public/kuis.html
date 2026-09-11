@@ -16,9 +16,13 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 .kop a{margin-left:auto;color:var(--gold);font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap}
 .wrap{padding:18px 22px 40px}
 .ident{background:#fff;border:1px solid var(--line);border-radius:12px;padding:9px 14px;font-size:13px;color:var(--navy);margin-bottom:12px}
-.areas{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
-.areas button{flex:1;min-width:140px;border:2px solid var(--line);background:#fff;border-radius:12px;padding:10px;font-size:13px;font-weight:700;color:var(--navy);cursor:pointer;font-family:inherit}
-.areas button.on{border-color:var(--gold);background:var(--navy);color:#fff}
+.lock{background:var(--navy);color:#fff;border-radius:12px;padding:9px 14px;font-size:13px;font-weight:700;margin-bottom:12px}
+.lock span{color:var(--gold)}
+.noident{background:#fff;border:1px solid #fecaca;border-radius:16px;padding:28px 22px;text-align:center;display:none}
+.noident.show{display:block}
+.noident h3{color:var(--navy);font-size:17px;margin-bottom:8px}
+.noident p{font-size:14px;color:var(--mut);line-height:1.7;margin-bottom:14px}
+.noident a{display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;font-size:14px;border-radius:12px;padding:12px 26px;text-decoration:none}
 .banner{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;margin-bottom:12px}
 .banner img{width:100%;max-height:230px;object-fit:cover;display:block}
 .banner .cap{padding:10px 16px;font-size:13px;color:var(--navy);font-weight:700}
@@ -34,6 +38,12 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 .qcard .lvl{display:inline-block;font-size:11px;font-weight:800;padding:3px 10px;border-radius:99px;color:#fff;margin-bottom:8px}
 .l-Tinggi{background:var(--hi)}.l-Sedang{background:var(--mid)}.l-Rendah{background:var(--ok)}
 .qcard h2{color:var(--navy);font-size:17px;line-height:1.6;margin-bottom:12px}
+.pin h3{color:var(--navy);font-size:16px;line-height:1.6;margin-bottom:4px}
+.pin p{font-size:13px;color:var(--mut);margin-bottom:10px}
+.pinwrap{position:relative;border-radius:12px;overflow:hidden;border:2px solid var(--line)}
+.pinwrap img{width:100%;max-height:320px;object-fit:cover;display:block;cursor:crosshair}
+.pindot{position:absolute;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:var(--hi);border:3px solid #fff;box-shadow:0 1px 6px rgba(0,0,0,.4);display:none}
+.pinskip{width:100%;margin-top:10px;background:#fff;border:2px solid var(--line);color:var(--navy);border-radius:12px;padding:11px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
 .opsi button{display:block;width:100%;text-align:left;margin-bottom:8px;background:#f8fafc;border:2px solid var(--line);border-radius:12px;padding:11px 14px;font-size:14px;cursor:pointer;font-family:inherit;color:var(--txt)}
 .opsi button:hover:not(:disabled){border-color:var(--gold)}
 .opsi button:disabled{cursor:default;opacity:.95}
@@ -59,26 +69,15 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 #hasilCard .skor{font-size:56px;font-weight:800;color:var(--gold);margin:12px 0 0;line-height:1}
 #hasilCard .max{font-size:13px;opacity:.9}
 #hasilCard .pred{display:inline-block;margin-top:10px;background:var(--gold);color:var(--navy);font-weight:800;font-size:14px;border-radius:99px;padding:6px 22px}
+#hasilCard .klik{margin:16px auto 0;max-width:520px;text-align:left;font-size:12px;line-height:1.8;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:10px 14px}
+#hasilCard .klik b{color:var(--gold)}
+#hasilCard .klik .b{color:#4ade80}#hasilCard .klik .s{color:#f87171}
 #hasilCard .foot{margin-top:14px;font-size:11px;opacity:.75}
 .hasil .aksi{padding:16px;display:flex;gap:10px;flex-wrap:wrap;background:#fff}
 .hasil .aksi button{flex:1;min-width:150px;border:0;border-radius:12px;padding:12px;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit}
 #btnSimpan{background:var(--gold);color:var(--navy)}
 #btnUlangi{background:var(--navy);color:#fff}
-#btnArea{background:#fff;border:2px solid var(--line)!important;color:var(--navy)}
-.mini{margin-top:14px;background:#fff;border-radius:16px;padding:20px;border-top:5px solid var(--hi);display:none}
-.mini.show{display:block}
-.mini h3{color:var(--navy);font-size:16px;margin-bottom:6px}
-.mini p{font-size:13px;color:var(--mut);line-height:1.6;margin-bottom:8px}
-.mini label{display:block;font-size:13px;font-weight:700;color:var(--navy);margin:10px 0 5px}
-.mini input{width:100%;border:2px solid var(--line);border-radius:12px;padding:10px 14px;font-size:14px;font-family:inherit}
-.mini .pick{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px}
-.mini .pick button{border:2px solid var(--line);background:#f8fafc;border-radius:12px;padding:10px;font-size:13px;font-weight:700;color:var(--navy);cursor:pointer;font-family:inherit}
-.mini .pick button.on{border-color:var(--gold);background:var(--navy);color:#fff}
-.mini .go{width:100%;margin-top:14px;background:var(--gold);color:var(--navy);border:0;border-radius:12px;padding:12px;font-size:15px;font-weight:800;cursor:pointer;font-family:inherit}
-.err{background:#fef2f2;border:1px solid #fecaca;color:var(--hi);font-size:13px;border-radius:10px;padding:10px 12px;margin-top:10px;display:none}
-.err.show{display:block}
 footer{text-align:center;color:var(--mut);font-size:12px;padding:18px}
-@media(max-width:600px){.mini .pick{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -86,47 +85,37 @@ footer{text-align:center;color:var(--mut);font-size:12px;padding:18px}
 <div class="wrap">
 
 <div class="ident" id="ident">👤 <b id="idNama">–</b> · 🏫 <span id="idKelas">–</span> · 📍 <span id="idArea">–</span></div>
+<div class="lock" id="lockInfo">🔒 Kuis terkunci: <span id="lockArea">–</span> (dari form masuk)</div>
 
-<div class="areas" id="areaBar">
-<button type="button" data-area="lab">🖥️ Lab</button>
-<button type="button" data-area="tower">🗼 Tower</button>
-<button type="button" data-area="fiber">🔬 Fiber</button>
-<button type="button" data-area="bengkel">🔧 Bengkel</button>
-</div>
-
-<div class="mini" id="miniGate">
-<h3>⚠️ Isi identitas dulu</h3>
-<p>Mode Tebak Bahaya butuh nama, kelas, dan area — sama seperti form masuk di halaman utama.</p>
-<label for="mNama">👤 Nama lengkap</label>
-<input id="mNama" type="text" placeholder="cth: Budi Santoso" maxlength="60">
-<label for="mKelas">🏫 Kelas</label>
-<input id="mKelas" type="text" placeholder="cth: X TKJ 1" maxlength="30">
-<label>📍 Area kerja</label>
-<div class="pick" id="mPick">
-<button type="button" data-area="lab">🖥️ Lab Komputer</button>
-<button type="button" data-area="tower">🗼 Tower Triangle</button>
-<button type="button" data-area="fiber">🔬 Fiber Optik</button>
-<button type="button" data-area="bengkel">🔧 Bengkel</button>
-</div>
-<div class="err" id="mErr"></div>
-<button class="go" id="mGo" type="button">🚀 Mulai Kuis</button>
+<div class="noident" id="noIdent">
+<h3>⚠️ Identitas belum diisi</h3>
+<p>Kembali ke halaman utama untuk isi nama &amp; pilih area.</p>
+<a href="index.html">← Kembali ke Halaman Utama</a>
 </div>
 
 <div id="play">
 <div class="banner"><img id="areaImg" src="img/place-lab.png" alt="ilustrasi area kerja"><div class="cap"><span id="areaNama">Lab Komputer &amp; Jaringan</span><small id="areaDesc">20 soal · 5 poin per jawaban benar · 30 detik per soal</small></div></div>
 <div class="topbar">
-<div class="prog"><span id="progTxt">Soal 1/20</span><div class="bar"><i id="progBar"></i></div></div>
+<div class="prog"><span id="progTxt">Titik 1/20</span><div class="bar"><i id="progBar"></i></div></div>
 <div class="timer" id="timer">⏱ 30</div>
 <div class="skorbox">⭐ <span id="skorTxt">0</span></div>
 </div>
 <div class="qcard" id="qcard">
+<div class="pin" id="pinStage">
+<h3 id="pinTitik">Titik 1/20 — di mana bahayanya? Klik area gambar yang berbahaya</h3>
+<p>Tebak dulu letak bahaya pada gambar, lalu jawab soal pilihan ganda.</p>
+<div class="pinwrap" id="pinWrap"><img id="pinImg" src="img/place-lab.png" alt="tebak letak bahaya"><span class="pindot" id="pinDot"></span></div>
+<button class="pinskip" id="btnPinSkip" type="button">Tidak tahu — lanjut ke soal →</button>
+</div>
+<div id="mcqStage" style="display:none">
 <span class="lvl l-Sedang" id="qLvl">Sedang</span>
-<h2 id="qTanya">Memuat soal…</h2>
+<h2 id="qTanya">Memuat soal...</h2>
 <div class="opsi" id="qOpsi"></div>
 <div class="fb" id="qFb"></div>
 <div class="navrow">
 <button id="btnSkip" type="button">⏭ Lewati (0 poin)</button>
 <button id="btnNext" type="button">Soal berikutnya →</button>
+</div>
 </div>
 </div>
 </div>
@@ -140,12 +129,12 @@ footer{text-align:center;color:var(--mut);font-size:12px;padding:18px}
 <div class="skor" id="hSkor">0</div>
 <div class="max" id="hMax">dari 100 · 0/20 benar</div>
 <div><span class="pred" id="hPred"> predikat </span></div>
+<div class="klik" id="klikList"></div>
 <div class="foot">SMK TI Muhammadiyah Cikampek · DTJKT Kelas X · Elemen 4 K3LH</div>
 </div>
 <div class="aksi">
 <button id="btnSimpan" type="button">💾 Simpan Hasil (PNG)</button>
 <button id="btnUlangi" type="button">🔄 Ulangi</button>
-<button id="btnArea" type="button">📍 Ganti Area</button>
 </div>
 </div>
 
@@ -155,10 +144,10 @@ footer{text-align:center;color:var(--mut);font-size:12px;padding:18px}
 (function(){
 'use strict';
 var AREA_LABEL={lab:'Lab Komputer & Jaringan',tower:'Tower Triangle (Outdoor)',fiber:'Fiber Optik & Splicing',bengkel:'Bengkel'};
-var AREA_IMG={lab:'img/place-lab.png',tower:'img/place-tower.png',fiber:'img/place-fiber.png',bengkel:'img/place-lab.png'};
+var AREA_IMG={lab:'img/place-lab.png',tower:'img/place-tower.png',fiber:'img/place-fiber.png',bengkel:'img/place-fiber.png'};
 var PER_SOAL=30, POIN=5, N_SOAL=20;
-var area='',soal=[],idx=0,skor=0,benar=0,sisa=PER_SOAL,tick=null,locked=false;
-var mPick='';
+var area='lab',soal=[],idx=0,skor=0,benar=0,sisa=PER_SOAL,tick=null,locked=false;
+var klik=[],hasilArr=[];
 function $(id){return document.getElementById(id);}
 function getSiswa(){try{return JSON.parse(sessionStorage.getItem('kyt_siswa')||'null');}catch(e){return null;}}
 function qsArea(){try{var m=location.search.match(/[?&]area=([^&]+)/);return m?decodeURIComponent(m[1]):'';}catch(e){return '';}}
@@ -211,24 +200,55 @@ return out;
 }
 function setArea(a){
 area=AREA_LABEL[a]?a:'lab';
-document.querySelectorAll('#areaBar button').forEach(function(b){b.classList.toggle('on',b.dataset.area===area);});
 $('areaImg').src=AREA_IMG[area]||AREA_IMG.lab;
 $('areaImg').alt='ilustrasi '+AREA_LABEL[area];
 $('areaNama').textContent='📍 '+AREA_LABEL[area];
+$('pinImg').src=AREA_IMG[area]||AREA_IMG.lab;
+$('pinImg').alt='tebak letak bahaya — '+AREA_LABEL[area];
+$('lockArea').textContent=AREA_LABEL[area];
 }
 function startQuiz(){
-idx=0;skor=0;benar=0;
+idx=0;skor=0;benar=0;klik=[];hasilArr=[];
 $('hasil').classList.remove('show');
 $('play').style.display='block';
-renderSoal();
+renderPin();
 }
 function stopTick(){if(tick){clearInterval(tick);tick=null;}}
-function renderSoal(){
-locked=false;
-var s=soal[idx];
-$('progTxt').textContent='Soal '+(idx+1)+'/'+soal.length;
+function renderPin(){
+stopTick();
+$('progTxt').textContent='Titik '+(idx+1)+'/'+soal.length;
 $('progBar').style.width=((idx)/soal.length*100)+'%';
 $('skorTxt').textContent=skor;
+$('pinStage').style.display='block';
+$('mcqStage').style.display='none';
+$('pinTitik').textContent='Titik '+(idx+1)+'/'+soal.length+' — di mana bahayanya? Klik area gambar yang berbahaya';
+$('pinDot').style.display='none';
+$('timer').textContent='⏱ '+PER_SOAL;$('timer').classList.remove('low');
+}
+function catatPin(x,y){
+klik[idx]=(x===null||y===null)?null:{x:x,y:y};
+var d=$('pinDot');
+if(x!==null){
+d.style.left=x+'%';d.style.top=y+'%';d.style.display='block';
+setTimeout(renderMcq,350);
+}else{
+renderMcq();
+}
+}
+$('pinImg').onclick=function(ev){
+var r=this.getBoundingClientRect();
+var x=Math.round((ev.clientX-r.left)/r.width*100);
+var y=Math.round((ev.clientY-r.top)/r.height*100);
+x=Math.min(100,Math.max(0,x));y=Math.min(100,Math.max(0,y));
+catatPin(x,y);
+};
+$('btnPinSkip').onclick=function(){catatPin(null,null);};
+function renderMcq(){
+locked=false;
+var s=soal[idx];
+$('pinStage').style.display='none';
+$('mcqStage').style.display='block';
+$('progTxt').textContent='Soal '+(idx+1)+'/'+soal.length;
 $('qLvl').textContent=s.level||'Sedang';
 $('qLvl').className='lvl l-'+(s.level||'Sedang');
 $('qTanya').textContent=s.tanya;
@@ -265,11 +285,12 @@ var s=soal[idx],btns=kunci();
 btns[s.benar].classList.add('benar');
 var fb=$('qFb');
 if(i===s.benar){
-skor+=POIN;benar++;
+skor+=POIN;benar++;hasilArr[idx]=true;
 btn.classList.add('benar');
 fb.className='fb show ok';
 fb.innerHTML='✅ <b>Benar! +'+POIN+' poin.</b>'+(s.penjelasan?'<br>💡 '+s.penjelasan:'');
 }else{
+hasilArr[idx]=false;
 btn.classList.add('salah');
 fb.className='fb show no';
 fb.innerHTML='❌ <b>Kurang tepat.</b> Jawaban benar: <b>'+['A','B','C','D'][s.benar]+'</b>'+(s.penjelasan?'<br>💡 '+s.penjelasan:'');
@@ -281,6 +302,7 @@ $('btnNext').classList.add('show');
 function autoSkip(){
 if(locked)return;
 var s=soal[idx],btns=kunci();
+hasilArr[idx]=false;
 btns[s.benar].classList.add('benar');
 var fb=$('qFb');
 fb.className='fb show skip';
@@ -291,6 +313,7 @@ $('btnNext').classList.add('show');
 $('btnSkip').onclick=function(){
 if(locked)return;
 var s=soal[idx],btns=kunci();
+hasilArr[idx]=false;
 var fb=$('qFb');
 fb.className='fb show skip';
 fb.innerHTML='⏭ <b>Dilewati</b> (0 poin). Jawaban benar: <b>'+['A','B','C','D'][s.benar]+'</b>'+(s.penjelasan?'<br>💡 '+s.penjelasan:'');
@@ -298,7 +321,7 @@ $('btnSkip').style.display='none';
 $('btnNext').classList.add('show');
 };
 $('btnNext').onclick=function(){
-if(idx<soal.length-1){idx++;renderSoal();window.scrollTo({top:0,behavior:'smooth'});}
+if(idx<soal.length-1){idx++;renderPin();window.scrollTo({top:0,behavior:'smooth'});}
 else{finish();}
 };
 function predikat(){
@@ -308,6 +331,7 @@ if(pct>=70)return '🥇 Wasit K3 Andal';
 if(pct>=50)return '🥈 Pengamat K3 Aktif';
 return '🥉 Pemula K3 — Ayo Latihan Lagi';
 }
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function finish(){
 stopTick();
 $('progBar').style.width='100%';
@@ -320,11 +344,17 @@ $('hTgl').textContent=tgl+' · '+AREA_LABEL[area];
 $('hSkor').textContent=skor;
 $('hMax').textContent='dari '+(soal.length*POIN)+' · '+benar+'/'+soal.length+' benar';
 $('hPred').textContent=predikat();
+var html='<b>Tebakan titik bahaya:</b><br>';
+for(var i=0;i<soal.length;i++){
+var k=klik[i],ok=hasilArr[i]===true;
+var ket=k?('klik ('+k.x+', '+k.y+')'):'tidak menebak';
+html+='Titik '+(i+1)+': '+esc(ket)+' — <span class="'+(ok?'b':'s')+'">'+(ok?'benar':'salah')+'</span><br>';
+}
+$('klikList').innerHTML=html;
 $('hasil').classList.add('show');
 window.scrollTo({top:0,behavior:'smooth'});
 }
 $('btnUlangi').onclick=function(){startQuiz();window.scrollTo({top:0,behavior:'smooth'});};
-$('btnArea').onclick=function(){$('play').style.display='block';$('hasil').classList.remove('show');document.getElementById('areaBar').scrollIntoView({behavior:'smooth'});};
 $('btnSimpan').onclick=function(){
 if(typeof html2canvas==='undefined'){alert('⚠️ html2canvas belum termuat (butuh internet CDN). Cek koneksi lalu coba lagi.');return;}
 var s=getSiswa()||{};
@@ -335,26 +365,6 @@ a.download='hasil-tebak-bahaya-'+area+'-'+nm+'.png';
 a.href=canvas.toDataURL('image/png');
 document.body.appendChild(a);a.click();a.remove();
 }).catch(function(){alert('⚠️ Gagal membuat PNG. Coba lagi.');});
-};
-document.querySelectorAll('#areaBar button').forEach(function(b){
-b.onclick=function(){
-var a=b.dataset.area,s=getSiswa()||{};
-s.area=a;
-try{sessionStorage.setItem('kyt_siswa',JSON.stringify({nama:s.nama||'',kelas:s.kelas||'',area:a}));}catch(e){}
-setArea(a);loadSoal(a);
-};
-});
-/* mini gate bila sessionStorage kosong */
-document.querySelectorAll('#mPick button').forEach(function(b){
-b.onclick=function(){document.querySelectorAll('#mPick button').forEach(function(x){x.classList.remove('on');});b.classList.add('on');mPick=b.dataset.area;$('mErr').classList.remove('show');};
-});
-$('mGo').onclick=function(){
-var n=$('mNama').value.trim(),k=$('mKelas').value.trim();
-if(!n){$('mErr').textContent='⚠️ Nama wajib diisi.';$('mErr').classList.add('show');return;}
-if(!k){$('mErr').textContent='⚠️ Kelas wajib diisi.';$('mErr').classList.add('show');return;}
-if(!mPick){$('mErr').textContent='⚠️ Pilih salah satu area kerja.';$('mErr').classList.add('show');return;}
-try{sessionStorage.setItem('kyt_siswa',JSON.stringify({nama:n,kelas:k,area:mPick}));}catch(e){}
-boot(mPick);
 };
 function loadSoal(a){
 fetch('quiz.json').then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(d){
@@ -379,24 +389,24 @@ if(lv!=='Tinggi'&&lv!=='Sedang'&&lv!=='Rendah')lv='Sedang';
 return {tanya:s.tanya,opsi:op,benar:Math.min(Math.max(0,s.benar|0),op.length-1),level:lv,penjelasan:s.penjelasan||''};
 });
 }
-function boot(a){
-setArea(a||qsArea()||'lab');
+function boot(){
 var s=getSiswa();
-if(!s||!s.nama||!s.kelas){
-$('miniGate').classList.add('show');
+var a=(s&&s.area)||qsArea()||'lab';
+setArea(a);
+if(!s||!s.nama){
+$('noIdent').classList.add('show');
 $('play').style.display='none';
-mPick=area;
-document.querySelectorAll('#mPick button').forEach(function(b){b.classList.toggle('on',b.dataset.area===area);});
+$('ident').style.display='none';
+$('lockInfo').style.display='none';
 return;
 }
-$('miniGate').classList.remove('show');
+$('noIdent').classList.remove('show');
 $('idNama').textContent=s.nama;
-$('idKelas').textContent=s.kelas;
-$('idArea').textContent=AREA_LABEL[s.area]||s.area;
-if(s.area&&s.area!==area)setArea(s.area);
+$('idKelas').textContent=s.kelas||'–';
+$('idArea').textContent=AREA_LABEL[area]||area;
 loadSoal(area);
 }
-boot(qsArea());
+boot();
 })();
 </script>
 </body>
